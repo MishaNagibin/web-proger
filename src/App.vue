@@ -1,29 +1,49 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <cTopNavigationBar />
+        <cHeader />
+        <router-view />
     </div>
-    <router-view/>
-  </div>
 </template>
 
+<script lang="ts">
+import Vue from "vue";
+import cTopNavigationBar from "@/components/TopNavigationBar.vue";
+import cHeader from "@/components/Header.vue";
+
+export default Vue.extend({
+    name: "app",
+    components: { cTopNavigationBar, cHeader }
+});
+</script>
+
 <style lang="scss">
+@import "./styles/colors";
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+    transition: opacity 0.5s ease;
+    min-height: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: auto;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+
+html {
+    width: 100%;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $gray-900;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    overflow: hidden;
 }
 </style>
