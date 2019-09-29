@@ -18,24 +18,10 @@
                 :class="{ active: $route.name === category.route}"
             >{{ category.name }}</router-link>
         </section>
-        <section class="courses">
-            <div
-                v-for="(course, index) of preparedCourses"
-                :key="index"
-            >
-                <router-link :to="{ name: 'Course', params: { courseID: course.ID, courseSlug: course.slug } }">
-                    <span>{{ course.category }}</span>
-                    <img :src="getImgUrl(course.image)" />
-                </router-link>
-                <div class="info">
-                    <h3>{{ course.name }}</h3>
-                    <span>{{ course.description }}</span>
-                    <router-link :to="{ name: 'Course', params: { courseID: course.ID, courseSlug: course.slug } }">
-                        <button>Посмотреть</button>
-                    </router-link>
-                </div>
-            </div>
-        </section>
+        <cCourses
+            :listCourses="courses"
+            :langCourse="lang"
+        />
     </section>
 </template>
 
@@ -43,9 +29,13 @@
 import Vue from "vue";
 import { Categories, Courses } from "@/modeles";
 import api from "@/api";
+import cCourses from "@/components/Courses.vue";
 
 export default Vue.extend({
     name: "CoursesFrontendFilter",
+    components: {
+        cCourses
+    },
     data() {
         return {
             courses: [] as Courses[],
@@ -68,9 +58,6 @@ export default Vue.extend({
         }
     },
     computed: {
-        preparedCourses(): Object {
-            return this.courses.filter(c => c.lang === this.lang).slice(0, 10);
-        },
         preparedCategories(): Object {
             return this.categoriesFrontend.filter(
                 c => c.route === this.$route.name
@@ -135,115 +122,6 @@ export default Vue.extend({
             background-color: $red-500;
             color: $gray-000;
             border-radius: 4px;
-        }
-    }
-
-    & > .courses {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        & > div {
-            margin: 20px 0;
-            background-color: $gray-200;
-            display: flex;
-            width: 100%;
-
-            & > a {
-                text-decoration: none;
-                display: flex;
-                align-self: center;
-                color: $gray-000;
-                position: relative;
-
-                & > span {
-                    position: absolute;
-                    background-color: $red-500;
-                    padding: 5px;
-                }
-
-                & > img {
-                    width: 350px;
-                }
-            }
-
-            & > .info {
-                display: flex;
-                flex-direction: column;
-                margin-left: 20px;
-                width: 100%;
-
-                & > a {
-                    display: flex;
-                    align-self: flex-end;
-                    text-decoration: none;
-
-                    & > button {
-                        border: 1px solid $red-500;
-                        outline: none;
-                        user-select: none;
-                        cursor: pointer;
-                        background: $red-500;
-                        margin-right: 20px;
-                        border-radius: 4px;
-                        padding: 0 16px;
-                        color: $gray-000;
-                        height: 40px;
-                        margin-bottom: 20px;
-
-                        &:hover {
-                            background: $red-400;
-                        }
-
-                        &:active {
-                            background: $red-600;
-                        }
-
-                        &:focus {
-                            box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.15);
-                        }
-                    }
-                }
-
-                & > span {
-                    margin-bottom: 10px;
-                }
-            }
-
-            &:hover {
-                box-shadow: 0 0 10px 3px $gray-500;
-            }
-        }
-
-        & > a {
-            display: flex;
-            text-decoration: none;
-
-            & > button {
-                border: 1px solid $red-500;
-                outline: none;
-                user-select: none;
-                cursor: pointer;
-                background: $red-500;
-                border-radius: 4px;
-                padding: 0 16px;
-                color: $gray-000;
-                height: 40px;
-                margin-bottom: 20px;
-                width: 200px;
-
-                &:hover {
-                    background: $red-400;
-                }
-
-                &:active {
-                    background: $red-600;
-                }
-
-                &:focus {
-                    box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.15);
-                }
-            }
         }
     }
 }

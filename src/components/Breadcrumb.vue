@@ -56,6 +56,7 @@ export default Vue.extend({
 
 .c-breadcrumb {
     display: flex;
+    margin-top: 20px;
 
     & > ul {
         display: flex;
