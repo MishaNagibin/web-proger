@@ -1,5 +1,5 @@
 <template>
-    <section class="c-courses-frontend-filter">
+    <section class="c-courses-backend-filter">
         <section class="description">
             <span
                 v-for="(category, index) of preparedCategories"
@@ -12,7 +12,7 @@
                 <span>Фильтр</span>
             </span>
             <router-link
-                v-for="(category, index) of categoriesFrontend"
+                v-for="(category, index) of categoriesBackend"
                 :key="index"
                 :to="{ name: category.route }"
                 :class="{ active: $route.name === category.route}"
@@ -45,21 +45,28 @@ import { Categories, Courses } from "@/modeles";
 import api from "@/api";
 
 export default Vue.extend({
-    name: "CoursesFrontendFilter",
+    name: "CoursesBackendFilter",
     data() {
         return {
             courses: [] as Courses[],
-            categoriesFrontend: [] as Categories[],
-            lang: undefined as string | undefined
+            categoriesBackend: [] as Categories[],
+            categories: [] as Categories[],
+            category: undefined as string | undefined
         };
     },
     created() {
-        this.$root.$on("lang", (lang: string) => (this.lang = lang));
+        this.$root.$on(
+            "category",
+            (category: string) => (this.category = category)
+        );
+        api.categories.get().then(c => {
+            this.categories = c;
+        });
         api.courses.get().then(c => {
             this.courses = c;
         });
-        api.categoriesFrontend.get().then(c => {
-            this.categoriesFrontend = c;
+        api.categoriesBackend.get().then(c => {
+            this.categoriesBackend = c;
         });
     },
     methods: {
@@ -69,12 +76,12 @@ export default Vue.extend({
     },
     computed: {
         preparedCourses(): Object {
-            return this.courses.filter(c => c.lang === this.lang).slice(0, 10);
+            return this.courses
+                .filter(c => c.category === this.category)
+                .slice(0, 10);
         },
         preparedCategories(): Object {
-            return this.categoriesFrontend.filter(
-                c => c.route === this.$route.name
-            );
+            return this.categories.filter(c => c.route === this.$route.name);
         }
     }
 });
@@ -84,7 +91,7 @@ export default Vue.extend({
 @import "../styles/colors";
 @import "../styles/icons";
 
-.c-courses-frontend-filter {
+.c-courses-backend-filter {
     & > .description {
         padding: 20px;
         background-color: $red-500;

@@ -45,5 +45,18 @@ body {
     font-size: 1em;
     line-height: 1.5;
     overflow: hidden;
+
+    ::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: $gray-000;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: $gray-700;
+        border-radius: 3px;
+    }
 }
 </style>

@@ -1,6 +1,7 @@
 <template>
     <main class="v-react">
         <section class="container">
+            <cBreadcrumb />
             <cCoursesFrontendFilter />
         </section>
     </main>
@@ -9,10 +10,11 @@
 <script lang="ts">
 import Vue from "vue";
 import cCoursesFrontendFilter from "@/components/CoursesFrontendFilter.vue";
+import cBreadcrumb from "@/components/Breadcrumb.vue";
 
 export default Vue.extend({
     name: "React",
-    components: { cCoursesFrontendFilter },
+    components: { cCoursesFrontendFilter, cBreadcrumb },
     mounted() {
         this.$root.$emit("lang", "React");
     }

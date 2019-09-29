@@ -1,22 +1,26 @@
 <template>
-    <main class="v-rxjs">
-        <section class="container">
+    <main class="v-backend">
+        <router-view />
+        <section
+            v-show="$route.name === 'Backend'"
+            class="container"
+        >
             <cBreadcrumb />
-            <cCoursesFrontendFilter />
+            <cCategoriesBackendFilter />
         </section>
     </main>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import cCoursesFrontendFilter from "@/components/CoursesFrontendFilter.vue";
+import cCategoriesBackendFilter from "@/components/CategoriesBackendFilter.vue";
 import cBreadcrumb from "@/components/Breadcrumb.vue";
 
 export default Vue.extend({
-    name: "RxJS",
-    components: { cCoursesFrontendFilter, cBreadcrumb },
+    name: "Backend",
+    components: { cCategoriesBackendFilter, cBreadcrumb },
     mounted() {
-        this.$root.$emit("lang", "RxJS");
+        this.$root.$emit("category", "Backend");
     }
 });
 </script>
@@ -25,7 +29,7 @@ export default Vue.extend({
 @import "../../styles/colors";
 @import "../../styles/icons";
 
-.v-rxjs {
+.v-backend {
     & > .container {
         max-width: 1600px;
         margin: 0 auto;

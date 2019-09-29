@@ -56,7 +56,7 @@ export default Vue.extend({
     name: "Home",
     data() {
         return {
-            courses: [] as Courses[]
+            courses: [] as Courses[],            
         };
     },
     created() {
@@ -73,7 +73,7 @@ export default Vue.extend({
         preparedCourses(): Object {
             return this.courses.slice(0, 5);
         }
-    }
+    },
 });
 </script>
 

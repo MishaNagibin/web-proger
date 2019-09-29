@@ -1,5 +1,5 @@
 <template>
-    <section class="c-courses-frontend-filter">
+    <section class="c-courses-backend-filter">
         <section class="description">
             <span
                 v-for="(category, index) of preparedCategories"
@@ -12,7 +12,7 @@
                 <span>Фильтр</span>
             </span>
             <router-link
-                v-for="(category, index) of categoriesFrontend"
+                v-for="(category, index) of categoriesBackend"
                 :key="index"
                 :to="{ name: category.route }"
                 :class="{ active: $route.name === category.route}"
@@ -45,11 +45,11 @@ import { Categories, Courses } from "@/modeles";
 import api from "@/api";
 
 export default Vue.extend({
-    name: "CoursesFrontendFilter",
+    name: "CoursesBackendFilter",
     data() {
         return {
             courses: [] as Courses[],
-            categoriesFrontend: [] as Categories[],
+            categoriesBackend: [] as Categories[],
             lang: undefined as string | undefined
         };
     },
@@ -58,8 +58,8 @@ export default Vue.extend({
         api.courses.get().then(c => {
             this.courses = c;
         });
-        api.categoriesFrontend.get().then(c => {
-            this.categoriesFrontend = c;
+        api.categoriesBackend.get().then(c => {
+            this.categoriesBackend = c;
         });
     },
     methods: {
@@ -72,7 +72,7 @@ export default Vue.extend({
             return this.courses.filter(c => c.lang === this.lang).slice(0, 10);
         },
         preparedCategories(): Object {
-            return this.categoriesFrontend.filter(
+            return this.categoriesBackend.filter(
                 c => c.route === this.$route.name
             );
         }
@@ -84,7 +84,7 @@ export default Vue.extend({
 @import "../styles/colors";
 @import "../styles/icons";
 
-.c-courses-frontend-filter {
+.c-courses-backend-filter {
     & > .description {
         padding: 20px;
         background-color: $red-500;

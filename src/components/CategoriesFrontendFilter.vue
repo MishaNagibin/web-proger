@@ -1,5 +1,11 @@
 <template>
-    <section class="c-courses-filter">
+    <section class="c-courses-frontend-filter">
+        <section class="description">
+            <span
+                v-for="(category, index) of preparedCategories"
+                :key="index"
+            >{{ category.description }}</span>
+        </section>
         <section class="filter">
             <span>
                 <span class="icon filter"></span>
@@ -44,11 +50,18 @@ export default Vue.extend({
         return {
             courses: [] as Courses[],
             categoriesFrontend: [] as Categories[],
-            category: undefined as string | undefined
+            category: undefined as string | undefined,
+            categories: [] as Categories[]
         };
     },
     created() {
-        this.$root.$on("category", (category: string) => (this.category = category));
+        this.$root.$on(
+            "category",
+            (category: string) => (this.category = category)
+        );
+        api.categories.get().then(c => {
+            this.categories = c;
+        });
         api.courses.get().then(c => {
             this.courses = c;
         });
@@ -66,6 +79,9 @@ export default Vue.extend({
             return this.courses
                 .filter(c => c.category === this.category)
                 .slice(0, 10);
+        },
+        preparedCategories(): Object {
+            return this.categories.filter(c => c.route === this.$route.name);
         }
     }
 });
@@ -75,7 +91,15 @@ export default Vue.extend({
 @import "../styles/colors";
 @import "../styles/icons";
 
-.c-courses-filter {
+.c-courses-frontend-filter {
+    & > .description {
+        padding: 20px;
+        background-color: $red-500;
+        color: $gray-000;
+        margin: 20px 0;
+        box-shadow: 0 0 10px 3px $gray-500;
+    }
+
     & > .filter {
         display: flex;
         flex-wrap: wrap;

@@ -1,22 +1,24 @@
 <template>
-    <main class="v-vue">
+    <main class="v-frontend">
         <router-view />
         <section
             v-show="$route.name === 'Frontend'"
             class="container"
         >
-            <cCategoriesFilter />
+            <cBreadcrumb />
+            <cCategoriesFrontendFilter />
         </section>
     </main>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import cCategoriesFilter from "@/components/CategoriesFilter.vue";
+import cCategoriesFrontendFilter from "@/components/CategoriesFrontendFilter.vue";
+import cBreadcrumb from "@/components/Breadcrumb.vue";
 
 export default Vue.extend({
-    name: "Vue",
-    components: { cCategoriesFilter },
+    name: "Frontend",
+    components: { cCategoriesFrontendFilter, cBreadcrumb },
     mounted() {
         this.$root.$emit("category", "Frontend");
     }

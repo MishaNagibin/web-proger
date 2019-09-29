@@ -111,7 +111,167 @@ function get() {
             image: "yii2.jpg",
             slug: "yii2",
             category: "Backend",
-            lang: "Yii2"
+            lang: "Yii"
+        },
+        {
+            ID: 13,
+            name: "Основы Node.js",
+            description:
+                "Node или Node.js — программная платформа, основанная на движке V8, превращающая JavaScript из узкоспециализированного языка в язык общего назначения.",
+            image: "nodejs.jpg",
+            slug: "basics-nodejs",
+            category: "Backend",
+            lang: "NodeJS"
+        },
+        {
+            ID: 14,
+            name: "Курс по созданию Telegram-бота",
+            description:
+                "В данном курсе вы научитесь работать с API Telegram, поработаете с Node.js. И научитесь создавать бота для телеграма.",
+            image: "telegram.png",
+            slug: "telegram-bot-creation-course",
+            category: "Backend",
+            lang: "NodeJS"
+        },
+        {
+            ID: 15,
+            name: "Курс по MongoDB",
+            description:
+                "MongoDB — документоориентированная система управления базами данных с открытым исходным кодом, не требующая описания схемы таблиц. Классифицирована как NoSQL, использует JSON-подобные документы и схему базы данных. Написана на языке C++.",
+            image: "mongodb.jpg",
+            slug: "mongodb",
+            category: "Backend",
+            lang: "MongoDB"
+        },
+        {
+            ID: 16,
+            name: "Курс по PHP",
+            description:
+                "PHP — скриптовый язык общего назначения, интенсивно применяемый для разработки веб-приложений. В настоящее время поддерживается подавляющим большинством хостинг-провайдеров и является одним из лидеров среди языков, применяющихся для создания динамических веб-сайтов.",
+            image: "php.jpg",
+            slug: "php",
+            category: "Backend",
+            lang: "PHP"
+        },
+        {
+            ID: 17,
+            name: "Курс по MySQL",
+            description:
+                "MySQL — свободная реляционная система управления базами данных. Разработку и поддержку MySQL осуществляет корпорация Oracle, получившая права на торговую марку вместе с поглощённой Sun Microsystems, которая ранее приобрела шведскую компанию MySQL AB.",
+            image: "mysql.jpg",
+            slug: "mysql",
+            category: "Backend",
+            lang: "MySQL"
+        },
+        {
+            ID: 18,
+            name: "Курс по Python, TKinter, Django.",
+            description:
+                "Python — высокоуровневый язык программирования общего назначения, ориентированный на повышение производительности разработчика и читаемости кода. Синтаксис ядра Python минималистичен. В то же время стандартная библиотека включает большой объём полезных функций.",
+            image: "Python-Tkinter--Django.jpg",
+            slug: "python-tkinter-django",
+            category: "Backend",
+            lang: "Python"
+        },
+        {
+            ID: 19,
+            name: "Курс по Symfony",
+            description:
+                "Symfony — свободный фреймворк, написанный на PHP, который использует паттерн Model-View-Controller. Symfony предлагает быструю разработку и управление веб-приложениями, позволяет легко решать рутинные задачи веб-программиста. Работает только с PHP 5 и выше. Имеет поддержку множества баз данных.",
+            image: "symfony.jpg",
+            slug: "symfony",
+            category: "Backend",
+            lang: "Symfony"
+        },
+        {
+            ID: 20,
+            name: "Курс по PostgreSQL",
+            description:
+                "PostgreSQL — свободная объектно-реляционная система управления базами данных. Существует в реализациях для множества UNIX-подобных платформ, включая AIX, различные BSD-системы, HP-UX, IRIX, Linux, macOS, Solaris/OpenSolaris, Tru64, QNX, а также для Microsoft Windows.",
+            image: "pgsql.jpg",
+            slug: "postgresql",
+            category: "Backend",
+            lang: "PostgreSQL"
+        },
+        {
+            ID: 21,
+            name: "Курс по Laravel",
+            description:
+                "Laravel — бесплатный веб-фреймворк с открытым кодом, предназначенный для разработки с использованием архитектурной модели MVC. Laravel выпущен под лицензией MIT. Исходный код проекта размещается на GitHub.",
+            image: "laravel.jpg",
+            slug: "laravel",
+            category: "Backend",
+            lang: "Laravel"
+        },
+        {
+            ID: 22,
+            name: "Курс по Ruby",
+            description:
+                "Ruby — динамический, рефлективный, интерпретируемый высокоуровневый язык программирования. Язык обладает независимой от операционной системы реализацией многопоточности, сильной динамической типизацией, сборщиком мусора и многими другими возможностями.",
+            image: "ruby.jpg",
+            slug: "ruby",
+            category: "Backend",
+            lang: "Ruby"
+        },
+        {
+            ID: 23,
+            name: "Курс по Ruby on Rails",
+            description:
+                "Ruby on Rails — фреймворк, написанный на языке программирования Ruby, реализует архитектурный шаблон Model-View-Controller для веб-приложений, а также обеспечивает их интеграцию с веб-сервером и сервером баз данных. Является открытым программным обеспечением и распространяется под лицензией MIT.",
+            image: "ruby-on-rails.jpg",
+            slug: "ruby-on-rails",
+            category: "Backend",
+            lang: "RubyOnRails"
+        },
+        {
+            ID: 24,
+            name: "Курс по C# от Udemy",
+            description:
+                "C# — объектно-ориентированный язык программирования.",
+            image: "sharp-udemy.png",
+            slug: "sharp-udemy",
+            category: "Backend",
+            lang: "C#"
+        },
+        {
+            ID: 25,
+            name: "Java Professional",
+            description:
+                "С должным подходом, ты за 60 дней сможешь писать на Java. После прохождения этого курса ты будешь с уверенностью чувствовать себя с ООП в Java, знать как работать с графическими компонентами, работать з базами данных и тд. Также ты научишься не только программировать но и проектировать.",
+            image: "java_profi.jpg",
+            slug: "java-professional",
+            category: "Backend",
+            lang: "Java"
+        },
+        {
+            ID: 26,
+            name: "Java. От простого к сложному",
+            description:
+                "После изучения материала данного курса студенты будут уметь программировать на языке Java на уровне, достаточном для самостоятельной разработки приложений и поиска своей первой работы в данной сфере. Те кто уже имел предварительный опыт программирования на других языках, смогут освоить концепции и практики используемые в языке Java.",
+            image: "java-prosto-slojno.jpg",
+            slug: "java-from-simple-to-complex",
+            category: "Backend",
+            lang: "Java"
+        },
+        {
+            ID: 27,
+            name: "Slim микрофреймворк PHP",
+            description:
+                "В данном курсе вы познакомитесь с PHP микрофреймворком Slim. Вы изучите роуты, шаблонизатор, многое другое и создадите cms.",
+            image: "slim.png",
+            slug: "slim",
+            category: "Backend",
+            lang: "Slim"
+        },
+        {
+            ID: 28,
+            name: "Программирование на Go",
+            description:
+                "В данном курсе вы познакомитесь и изучите Go. Go — компилируемый многопоточный язык программирования, разработанный внутри компании Google.",
+            image: "golang.jpg",
+            slug: "go-programming",
+            category: "Backend",
+            lang: "Golang"
         },
     ] as Courses[])
 }
