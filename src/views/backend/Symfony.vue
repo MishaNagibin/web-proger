@@ -1,21 +1,18 @@
 <template>
-    <main class="v-vue">
+    <main class="v-symfony">
         <section class="container">
-            <cCoursesFrontendFilter />
+            <cCoursesBackendFilter :lang="'Symfony'" />
         </section>
     </main>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import cCoursesFrontendFilter from "@/components/CoursesFrontendFilter.vue";
+import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
-    name: "Vue",
-    components: { cCoursesFrontendFilter },
-    mounted() {
-        this.$root.$emit("lang", "Vue");
-    }
+    name: "Symfony",
+    components: { cCoursesBackendFilter }
 });
 </script>
 
@@ -23,7 +20,7 @@ export default Vue.extend({
 @import "../../styles/colors";
 @import "../../styles/icons";
 
-.v-vue {
+.v-symfony {
     & > .container {
         max-width: 1600px;
         margin: 0 auto;

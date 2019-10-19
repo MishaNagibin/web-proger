@@ -1,21 +1,18 @@
 <template>
-    <main class="v-jquery">
+    <main class="v-java">
         <section class="container">
-            <cCoursesFrontendFilter />
+            <cCoursesBackendFilter :lang="'Java'" />
         </section>
     </main>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import cCoursesFrontendFilter from "@/components/CoursesFrontendFilter.vue";
+import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
-    name: "JQuery",
-    components: { cCoursesFrontendFilter },
-    mounted() {
-        this.$root.$emit("lang", "JQuery");
-    }
+    name: "Java",
+    components: { cCoursesBackendFilter }
 });
 </script>
 
@@ -23,7 +20,7 @@ export default Vue.extend({
 @import "../../styles/colors";
 @import "../../styles/icons";
 
-.v-jquery {
+.v-java {
     & > .container {
         max-width: 1600px;
         margin: 0 auto;

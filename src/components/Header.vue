@@ -44,7 +44,9 @@ header {
         align-items: center;
         height: 70px;
         width: 100%;
-        margin: 0 20px 20px 20px;
+        max-width: 1600px;
+        padding: 0 20px;
+        margin: 0 auto;
 
         & > a {
             color: $red-500;

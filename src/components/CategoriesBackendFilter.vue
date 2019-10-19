@@ -1,5 +1,5 @@
 <template>
-    <section class="c-courses-frontend-filter">
+    <section class="c-courses-backend-filter">
         <section class="description">
             <span
                 v-for="(category, index) of preparedCategories"
@@ -12,31 +12,31 @@
                 <span>Фильтр</span>
             </span>
             <router-link
-                v-for="(category, index) of categoriesFrontend"
+                v-for="(category, index) of categoriesBackend"
                 :key="index"
-                :to="{ name: 'Frontend', params: { slug: category.slug } }"
-                :class="{ active: $route.params.slug === category.slug}"
+                :to="{ name: category.route }"
+                :class="{ active: $route.name === category.route}"
             >{{ category.name }}</router-link>
         </section>
         <cCourses
             :listCourses="courses"
-            :langCourse="lang"
+            :categoryCourse="category"
         />
     </section>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import { CategoriesFrontend, Courses } from "@/modeles";
-import api from "@/api";
+import { Categories, Courses } from "@/modeles";
 import cCourses from "@/components/Courses.vue";
+import api from "@/api";
 
 export default Vue.extend({
-    name: "cCoursesFrontendFilter",
+    name: "CoursesBackendFilter",
+    // TODO: переписать компонент как фронт
     props: {
-        lang: {
-            type: String,
-            default: undefined
+        category: {
+            type: String
         }
     },
     components: {
@@ -45,15 +45,19 @@ export default Vue.extend({
     data() {
         return {
             courses: [] as Courses[],
-            categoriesFrontend: [] as CategoriesFrontend[]
+            categoriesBackend: [] as Categories[],
+            categories: [] as Categories[]
         };
     },
     created() {
+        api.categories.get().then(c => {
+            this.categories = c;
+        });
         api.courses.get().then(c => {
             this.courses = c;
         });
-        api.categoriesFrontend.get().then(c => {
-            this.categoriesFrontend = c;
+        api.categoriesBackend.get().then(c => {
+            this.categoriesBackend = c;
         });
     },
     methods: {
@@ -63,9 +67,7 @@ export default Vue.extend({
     },
     computed: {
         preparedCategories(): Object {
-            return this.categoriesFrontend.filter(
-                c => c.slug === this.$route.params.slug
-            );
+            return this.categories.filter(c => c.route === this.$route.name);
         }
     }
 });
@@ -75,7 +77,7 @@ export default Vue.extend({
 @import "../styles/colors";
 @import "../styles/icons";
 
-.c-courses-frontend-filter {
+.c-courses-backend-filter {
     & > .description {
         padding: 20px;
         background-color: $red-500;

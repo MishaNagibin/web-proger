@@ -175,6 +175,10 @@ export default Vue.extend({
                     flex-direction: column;
                     margin-left: 20px;
 
+                    & > h3 {
+                        margin: 0;
+                    }
+
                     & > a {
                         display: flex;
                         align-self: flex-end;

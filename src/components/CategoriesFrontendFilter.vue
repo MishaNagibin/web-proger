@@ -15,28 +15,27 @@
                 v-for="(category, index) of categoriesFrontend"
                 :key="index"
                 :to="{ name: 'Frontend', params: { slug: category.slug } }"
-                :class="{ active: $route.params.slug === category.slug}"
+                :class="{ active: $route.name === category.route || category.name === 'Все' }"
             >{{ category.name }}</router-link>
         </section>
         <cCourses
             :listCourses="courses"
-            :langCourse="lang"
+            :categoryCourse="category"
         />
     </section>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import { CategoriesFrontend, Courses } from "@/modeles";
-import api from "@/api";
+import { Categories, CategoriesFrontend, Courses } from "@/modeles";
 import cCourses from "@/components/Courses.vue";
+import api from "@/api";
 
 export default Vue.extend({
-    name: "cCoursesFrontendFilter",
+    name: "CoursesFrontendFilter",
     props: {
-        lang: {
-            type: String,
-            default: undefined
+        category: {
+            type: String
         }
     },
     components: {
@@ -45,7 +44,8 @@ export default Vue.extend({
     data() {
         return {
             courses: [] as Courses[],
-            categoriesFrontend: [] as CategoriesFrontend[]
+            categoriesFrontend: [] as CategoriesFrontend[],
+            categories: [] as Categories[]
         };
     },
     created() {
@@ -55,6 +55,9 @@ export default Vue.extend({
         api.categoriesFrontend.get().then(c => {
             this.categoriesFrontend = c;
         });
+        api.categories.get().then(c => {
+            this.categories = c;
+        });
     },
     methods: {
         getImgUrl(image: string) {
@@ -63,9 +66,7 @@ export default Vue.extend({
     },
     computed: {
         preparedCategories(): Object {
-            return this.categoriesFrontend.filter(
-                c => c.slug === this.$route.params.slug
-            );
+            return this.categories.filter(c => c.route === this.$route.name);
         }
     }
 });

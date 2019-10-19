@@ -1,21 +1,18 @@
 <template>
-    <main class="v-javascript">
+    <main class="v-postgresql">
         <section class="container">
-            <cCoursesFrontendFilter />
+            <cCoursesBackendFilter :lang="'PostgreSQL'" />
         </section>
     </main>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import cCoursesFrontendFilter from "@/components/CoursesFrontendFilter.vue";
+import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
-    name: "JavaScript",
-    components: { cCoursesFrontendFilter },
-    mounted() {
-        this.$root.$emit("lang", "JavaScript");
-    }
+    name: "PostgreSQL",
+    components: { cCoursesBackendFilter }
 });
 </script>
 
@@ -23,7 +20,7 @@ export default Vue.extend({
 @import "../../styles/colors";
 @import "../../styles/icons";
 
-.v-javascript {
+.v-postgresql {
     & > .container {
         max-width: 1600px;
         margin: 0 auto;

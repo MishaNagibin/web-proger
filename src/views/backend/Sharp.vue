@@ -1,21 +1,18 @@
 <template>
-    <main class="v-rxjs">
+    <main class="v-sharp">
         <section class="container">
-            <cCoursesFrontendFilter />
+            <cCoursesBackendFilter :lang="'C#'" />
         </section>
     </main>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import cCoursesFrontendFilter from "@/components/CoursesFrontendFilter.vue";
+import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
-    name: "RxJS",
-    components: { cCoursesFrontendFilter },
-    mounted() {
-        this.$root.$emit("lang", "RxJS");
-    }
+    name: "Sharp",
+    components: { cCoursesBackendFilter }
 });
 </script>
 
@@ -23,7 +20,7 @@ export default Vue.extend({
 @import "../../styles/colors";
 @import "../../styles/icons";
 
-.v-rxjs {
+.v-sharp {
     & > .container {
         max-width: 1600px;
         margin: 0 auto;
