@@ -1,7 +1,6 @@
 <template>
     <main class="v-java">
         <section class="container">
-            <cBreadcrumb />
             <cCoursesBackendFilter />
         </section>
     </main>
@@ -10,11 +9,10 @@
 <script lang="ts">
 import Vue from "vue";
 import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
-import cBreadcrumb from "@/components/Breadcrumb.vue";
 
 export default Vue.extend({
     name: "Java",
-    components: { cCoursesBackendFilter, cBreadcrumb },
+    components: { cCoursesBackendFilter },
     mounted() {
         this.$root.$emit("lang", "Java");
     }

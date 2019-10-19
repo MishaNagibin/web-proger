@@ -5,7 +5,6 @@
             v-show="$route.name === 'Backend'"
             class="container"
         >
-            <cBreadcrumb />
             <cCategoriesBackendFilter />
         </section>
     </main>
@@ -14,11 +13,10 @@
 <script lang="ts">
 import Vue from "vue";
 import cCategoriesBackendFilter from "@/components/CategoriesBackendFilter.vue";
-import cBreadcrumb from "@/components/Breadcrumb.vue";
 
 export default Vue.extend({
     name: "Backend",
-    components: { cCategoriesBackendFilter, cBreadcrumb },
+    components: { cCategoriesBackendFilter },
     mounted() {
         this.$root.$emit("category", "Backend");
     }

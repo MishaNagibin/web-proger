@@ -1,15 +1,15 @@
 <template>
-    <section class="c-breadcrumb">
+    <section class="c-breadcrumbs">
         <ul>
             <li
-                v-for="(breadcrumb, index) of breadcrumbList"
-                :key="index"
+                v-for="(b, i) of breadcrumbs"
+                :key="i"
             >
                 <span class="arrow">→</span>
                 <span
-                    @click="routeTo(index)"
-                    :class="{ linked: breadcrumb.link }"
-                >{{ breadcrumb.name }}</span>
+                    :class="{ linked: b.routeName }"
+                    @click="routeTo(i)"
+                >{{ b.name }}</span>
             </li>
         </ul>
     </section>
@@ -17,46 +17,46 @@
 
 <script lang="ts">
 import Vue from "vue";
-
-interface Breadcrumb {
-    name: string;
-    link: string;
-}
+import { Breadcrumbs } from "@/modeles";
 
 export default Vue.extend({
-    name: "Breadcrumb",
+    name: "Breadcrumbs",
     data() {
         return {
-            breadcrumbList: [] as Breadcrumb[]
+            breadcrumbs: [] as Breadcrumbs[]
         };
     },
-    mounted() {
-        this.updateList();
+    created() {
+        this.breadcrumbs = this.$route.meta.breadcrumbs;
     },
     watch: {
         $route() {
-            this.updateList();
+            this.breadcrumbs = this.$route.meta.breadcrumbs;
         }
     },
     methods: {
         routeTo(pRouteTo: number) {
-            if (this.breadcrumbList[pRouteTo].link) {
-                this.$router.push({ name: this.breadcrumbList[pRouteTo].link });
+            if (this.breadcrumbs[pRouteTo].routeName) {
+                this.$router.push({
+                    name: this.breadcrumbs[pRouteTo].routeName
+                });
             }
-        },
-        updateList() {
-            this.breadcrumbList = this.$route.meta.breadcrumb;
         }
     }
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../styles/colors";
 
-.c-breadcrumb {
+.c-breadcrumbs {
     display: flex;
-    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    max-width: 1600px;
+    padding: 0 20px;
+    margin: 20px 0 0 0;
 
     & > ul {
         display: flex;

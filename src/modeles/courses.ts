@@ -5,5 +5,12 @@ export interface Courses {
     image: string
     slug: string
     category: string
-    lang: string
+    lang: string,
+    lessons: Lessons[]
+}
+
+export interface Lessons {
+    ID: number
+    name: string
+    link: string
 }

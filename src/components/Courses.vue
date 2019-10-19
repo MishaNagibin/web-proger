@@ -1,5 +1,5 @@
 <template>
-    <section class="c-Courses">
+    <section class="c-courses">
         <div
             v-for="(course, index) of preparedCourses"
             :key="index"
@@ -118,7 +118,7 @@ export default Vue.extend({
 @import "../styles/colors";
 @import "../styles/icons";
 
-.c-Courses {
+.c-courses {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -153,6 +153,10 @@ export default Vue.extend({
             flex-direction: column;
             margin-left: 20px;
             width: 100%;
+
+            & > h3 {
+                margin: 0;
+            }
 
             & > a {
                 display: flex;

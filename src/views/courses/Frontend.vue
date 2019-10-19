@@ -5,7 +5,6 @@
             v-show="$route.name === 'Frontend'"
             class="container"
         >
-            <cBreadcrumb />
             <cCategoriesFrontendFilter />
         </section>
     </main>
@@ -14,11 +13,10 @@
 <script lang="ts">
 import Vue from "vue";
 import cCategoriesFrontendFilter from "@/components/CategoriesFrontendFilter.vue";
-import cBreadcrumb from "@/components/Breadcrumb.vue";
 
 export default Vue.extend({
     name: "Frontend",
-    components: { cCategoriesFrontendFilter, cBreadcrumb },
+    components: { cCategoriesFrontendFilter },
     mounted() {
         this.$root.$emit("category", "Frontend");
     }

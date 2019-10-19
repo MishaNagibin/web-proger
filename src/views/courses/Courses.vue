@@ -5,7 +5,6 @@
             v-show="$route.name === 'Courses'"
             class="container"
         >
-            <cBreadcrumb />
             <section class="filter">
                 <span>
                     <span class="icon filter"></span>
@@ -27,13 +26,11 @@
 import Vue from "vue";
 import { Categories, Courses } from "@/modeles";
 import api from "@/api";
-import cBreadcrumb from "@/components/Breadcrumb.vue";
 import cCourses from "@/components/Courses.vue";
 
 export default Vue.extend({
     name: "Courses",
     components: {
-        cBreadcrumb,
         cCourses
     },
     data() {
