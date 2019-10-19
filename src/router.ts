@@ -5,16 +5,6 @@ import vCourses from '@/views/courses/Courses.vue'
 import vCourse from '@/views/course/Course.vue';
 import vFrontend from '@/views/courses/Frontend.vue'
 import vBackend from '@/views/courses/Backend.vue'
-import vVue from '@/views/frontend/Vue.vue'
-import vReact from '@/views/frontend/React.vue'
-import vAngular from '@/views/frontend/Angular.vue'
-import vTypeScript from '@/views/frontend/TypeScript.vue'
-import vRxJS from '@/views/frontend/RxJS.vue'
-import vJavaScript from '@/views/frontend/JavaScript.vue'
-import vJQuery from '@/views/frontend/JQuery.vue'
-import vEcmaScript from '@/views/frontend/EcmaScript.vue'
-import vRedux from '@/views/frontend/Redux.vue'
-import vNuxt from '@/views/frontend/Nuxt.vue'
 import vYii from '@/views/backend/Yii.vue'
 import vNodeJS from '@/views/backend/NodeJS.vue'
 import vPHP from '@/views/backend/PHP.vue'
@@ -65,8 +55,9 @@ export default new Router({
             children: [
                 {
                     name: "Frontend",
-                    path: "frontend",
+                    path: "frontend/:slug?",
                     component: vFrontend,
+                    props: true,
                     meta: {
                         title: `${SITE_TITLE} | Frontend`,
                         breadcrumbs: [
@@ -75,148 +66,6 @@ export default new Router({
                             { name: 'Frontend' }
                         ]
                     },
-                    children: [
-                        {
-                            name: "Vue",
-                            path: "vue",
-                            component: vVue,
-                            meta: {
-                                title: `${SITE_TITLE} | Vue`,
-                                breadcrumbs: [
-                                    { name: 'Главная страница', routeName: 'Home' },
-                                    { name: 'Курсы', routeName: 'Courses' },
-                                    { name: 'Frontend', routeName: 'Frontend' },
-                                    { name: 'Vue' }
-                                ]
-                            },
-                        },
-                        {
-                            name: "React",
-                            path: "react",
-                            component: vReact,
-                            meta: {
-                                title: `${SITE_TITLE} | React`,
-                                breadcrumbs: [
-                                    { name: 'Главная страница', routeName: 'Home' },
-                                    { name: 'Курсы', routeName: 'Courses' },
-                                    { name: 'Frontend', routeName: 'Frontend' },
-                                    { name: 'React' }
-                                ]
-                            },
-                        },
-                        {
-                            name: "Angular",
-                            path: "angular",
-                            component: vAngular,
-                            meta: {
-                                title: `${SITE_TITLE} | Angular`,
-                                breadcrumbs: [
-                                    { name: 'Главная страница', routeName: 'Home' },
-                                    { name: 'Курсы', routeName: 'Courses' },
-                                    { name: 'Frontend', routeName: 'Frontend' },
-                                    { name: 'Angular' }
-                                ]
-                            },
-                        },
-                        {
-                            name: "TypeScript",
-                            path: "typescript",
-                            component: vTypeScript,
-                            meta: {
-                                title: `${SITE_TITLE} | TypeScript`,
-                                breadcrumbs: [
-                                    { name: 'Главная страница', routeName: 'Home' },
-                                    { name: 'Курсы', routeName: 'Courses' },
-                                    { name: 'Frontend', routeName: 'Frontend' },
-                                    { name: 'TypeScript' }
-                                ]
-                            },
-                        },
-                        {
-                            name: "RxJS",
-                            path: "rxjs",
-                            component: vRxJS,
-                            meta: {
-                                title: `${SITE_TITLE} | RxJS`,
-                                breadcrumbs: [
-                                    { name: 'Главная страница', routeName: 'Home' },
-                                    { name: 'Курсы', routeName: 'Courses' },
-                                    { name: 'Frontend', routeName: 'Frontend' },
-                                    { name: 'RxJS' }
-                                ]
-                            },
-                        },
-                        {
-                            name: "JavaScript",
-                            path: "javascript",
-                            component: vJavaScript,
-                            meta: {
-                                title: `${SITE_TITLE} | JavaScript`,
-                                breadcrumbs: [
-                                    { name: 'Главная страница', routeName: 'Home' },
-                                    { name: 'Курсы', routeName: 'Courses' },
-                                    { name: 'Frontend', routeName: 'Frontend' },
-                                    { name: 'JavaScript' }
-                                ]
-                            },
-                        },
-                        {
-                            name: "JQuery",
-                            path: "jquery",
-                            component: vJQuery,
-                            meta: {
-                                title: `${SITE_TITLE} | JQuery`,
-                                breadcrumbs: [
-                                    { name: 'Главная страница', routeName: 'Home' },
-                                    { name: 'Курсы', routeName: 'Courses' },
-                                    { name: 'Frontend', routeName: 'Frontend' },
-                                    { name: 'JQuery' }
-                                ]
-                            },
-                        },
-                        {
-                            name: "EcmaScript",
-                            path: "ecmascript",
-                            component: vEcmaScript,
-                            meta: {
-                                title: `${SITE_TITLE} | EcmaScript`,
-                                breadcrumbs: [
-                                    { name: 'Главная страница', routeName: 'Home' },
-                                    { name: 'Курсы', routeName: 'Courses' },
-                                    { name: 'Frontend', routeName: 'Frontend' },
-                                    { name: 'EcmaScript' }
-                                ]
-                            },
-                        },
-                        {
-                            name: "Redux",
-                            path: "redux",
-                            component: vRedux,
-                            meta: {
-                                title: `${SITE_TITLE} | Redux`,
-                                breadcrumbs: [
-                                    { name: 'Главная страница', routeName: 'Home' },
-                                    { name: 'Курсы', routeName: 'Courses' },
-                                    { name: 'Frontend', routeName: 'Frontend' },
-                                    { name: 'Redux' }
-                                ]
-                            },
-                        },
-                        {
-                            name: "Nuxt",
-                            path: "nuxt",
-                            component: vNuxt,
-                            meta: {
-                                title: `${SITE_TITLE} | Nuxt`,
-                                breadcrumbs: [
-                                    { name: 'Главная страница', routeName: 'Home' },
-                                    { name: 'Курсы', routeName: 'Courses' },
-                                    { name: 'Frontend', routeName: 'Frontend' },
-                                    { name: 'Nuxt' }
-                                ]
-                            },
-                        },
-                    ]
                 },
                 {
                     name: "Backend",

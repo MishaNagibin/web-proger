@@ -1,5 +1,8 @@
 <template>
-    <section class="c-breadcrumbs">
+    <section
+        v-if="$route.name !== 'Home'"
+        class="c-breadcrumbs"
+    >
         <ul>
             <li
                 v-for="(b, i) of breadcrumbs"
@@ -65,7 +68,7 @@ export default Vue.extend({
         margin: 0;
 
         & > li {
-            margin-right: 20px;
+            margin-right: 10px;
             display: inline-block;
 
             &:first-child {
@@ -84,7 +87,7 @@ export default Vue.extend({
 
             & > .arrow {
                 margin-top: -10px;
-                margin-right: 20px;
+                margin-right: 10px;
                 font-size: 26px;
                 cursor: default;
             }

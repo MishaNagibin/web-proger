@@ -1,7 +1,7 @@
 <template>
     <main class="v-yii">
         <section class="container">
-            <cCoursesBackendFilter />
+            <cCoursesBackendFilter :lang="'Yii'" />
         </section>
     </main>
 </template>
@@ -12,10 +12,7 @@ import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
     name: "Yii",
-    components: { cCoursesBackendFilter },
-    mounted() {
-        this.$root.$emit("lang", "Yii");
-    }
+    components: { cCoursesBackendFilter }
 });
 </script>
 

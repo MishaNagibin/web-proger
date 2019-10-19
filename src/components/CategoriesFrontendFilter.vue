@@ -14,8 +14,8 @@
             <router-link
                 v-for="(category, index) of categoriesFrontend"
                 :key="index"
-                :to="{ name: category.route }"
-                :class="{ active: $route.name === category.route}"
+                :to="{ name: 'Frontend', params: { slug: category.slug } }"
+                :class="{ active: $route.name === category.route || category.name === 'Все' }"
             >{{ category.name }}</router-link>
         </section>
         <cCourses
@@ -27,36 +27,36 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { Categories, Courses } from "@/modeles";
+import { Categories, CategoriesFrontend, Courses } from "@/modeles";
 import cCourses from "@/components/Courses.vue";
 import api from "@/api";
 
 export default Vue.extend({
     name: "CoursesFrontendFilter",
+    props: {
+        category: {
+            type: String
+        }
+    },
     components: {
         cCourses
     },
     data() {
         return {
             courses: [] as Courses[],
-            categoriesFrontend: [] as Categories[],
-            category: undefined as string | undefined,
+            categoriesFrontend: [] as CategoriesFrontend[],
             categories: [] as Categories[]
         };
     },
     created() {
-        this.$root.$on(
-            "category",
-            (category: string) => (this.category = category)
-        );
-        api.categories.get().then(c => {
-            this.categories = c;
-        });
         api.courses.get().then(c => {
             this.courses = c;
         });
         api.categoriesFrontend.get().then(c => {
             this.categoriesFrontend = c;
+        });
+        api.categories.get().then(c => {
+            this.categories = c;
         });
     },
     methods: {

@@ -5,7 +5,7 @@
             v-show="$route.name === 'Backend'"
             class="container"
         >
-            <cCategoriesBackendFilter />
+            <cCategoriesBackendFilter :category="'Backend'" />
         </section>
     </main>
 </template>
@@ -15,11 +15,9 @@ import Vue from "vue";
 import cCategoriesBackendFilter from "@/components/CategoriesBackendFilter.vue";
 
 export default Vue.extend({
+    // TODO: переписать раздел как фронт
     name: "Backend",
-    components: { cCategoriesBackendFilter },
-    mounted() {
-        this.$root.$emit("category", "Backend");
-    }
+    components: { cCategoriesBackendFilter }
 });
 </script>
 

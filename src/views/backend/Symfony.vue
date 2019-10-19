@@ -1,7 +1,7 @@
 <template>
     <main class="v-symfony">
         <section class="container">
-            <cCoursesBackendFilter />
+            <cCoursesBackendFilter :lang="'Symfony'" />
         </section>
     </main>
 </template>
@@ -12,10 +12,7 @@ import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
     name: "Symfony",
-    components: { cCoursesBackendFilter },
-    mounted() {
-        this.$root.$emit("lang", "Symfony");
-    }
+    components: { cCoursesBackendFilter }
 });
 </script>
 

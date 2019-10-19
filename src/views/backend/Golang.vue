@@ -1,7 +1,7 @@
 <template>
     <main class="v-golang">
         <section class="container">
-            <cCoursesBackendFilter />
+            <cCoursesBackendFilter :lang="'Golang'" />
         </section>
     </main>
 </template>
@@ -12,10 +12,7 @@ import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
     name: "Golang",
-    components: { cCoursesBackendFilter },
-    mounted() {
-        this.$root.$emit("lang", "Golang");
-    }
+    components: { cCoursesBackendFilter }
 });
 </script>
 

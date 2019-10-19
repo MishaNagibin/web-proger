@@ -1,7 +1,7 @@
 <template>
     <main class="v-nodejs">
         <section class="container">
-            <cCoursesBackendFilter />
+            <cCoursesBackendFilter :lang="'NodeJS'" />
         </section>
     </main>
 </template>
@@ -12,10 +12,7 @@ import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
     name: "NodeJS",
-    components: { cCoursesBackendFilter },
-    mounted() {
-        this.$root.$emit("lang", "NodeJS");
-    }
+    components: { cCoursesBackendFilter }
 });
 </script>
 

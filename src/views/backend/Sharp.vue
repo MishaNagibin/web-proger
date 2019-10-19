@@ -1,7 +1,7 @@
 <template>
     <main class="v-sharp">
         <section class="container">
-            <cCoursesBackendFilter />
+            <cCoursesBackendFilter :lang="'C#'" />
         </section>
     </main>
 </template>
@@ -12,10 +12,7 @@ import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
     name: "Sharp",
-    components: { cCoursesBackendFilter },
-    mounted() {
-        this.$root.$emit("lang", "C#");
-    }
+    components: { cCoursesBackendFilter }
 });
 </script>
 

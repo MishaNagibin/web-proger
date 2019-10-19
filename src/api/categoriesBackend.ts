@@ -3,6 +3,7 @@ import { Categories } from '@/modeles';
 
 function get() {
     return Promise.resolve([
+        // TODO: переписать апи как фронт
         {
             ID: 1,
             name: "Все",

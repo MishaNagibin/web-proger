@@ -1,7 +1,7 @@
 <template>
     <main class="v-php">
         <section class="container">
-            <cCoursesBackendFilter />
+            <cCoursesBackendFilter :lang="'PHP'" />
         </section>
     </main>
 </template>
@@ -12,10 +12,7 @@ import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
     name: "PHP",
-    components: { cCoursesBackendFilter },
-    mounted() {
-        this.$root.$emit("lang", "PHP");
-    }
+    components: { cCoursesBackendFilter }
 });
 </script>
 

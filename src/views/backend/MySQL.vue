@@ -1,7 +1,7 @@
 <template>
     <main class="v-mysql">
         <section class="container">
-            <cCoursesBackendFilter />
+            <cCoursesBackendFilter :lang="'MySQL'" />
         </section>
     </main>
 </template>
@@ -12,10 +12,7 @@ import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
     name: "MySQL",
-    components: { cCoursesBackendFilter },
-    mounted() {
-        this.$root.$emit("lang", "MySQL");
-    }
+    components: { cCoursesBackendFilter }
 });
 </script>
 

@@ -33,6 +33,12 @@ import api from "@/api";
 
 export default Vue.extend({
     name: "CoursesBackendFilter",
+    // TODO: переписать компонент как фронт
+    props: {
+        category: {
+            type: String
+        }
+    },
     components: {
         cCourses
     },
@@ -40,15 +46,10 @@ export default Vue.extend({
         return {
             courses: [] as Courses[],
             categoriesBackend: [] as Categories[],
-            categories: [] as Categories[],
-            category: undefined as string | undefined
+            categories: [] as Categories[]
         };
     },
     created() {
-        this.$root.$on(
-            "category",
-            (category: string) => (this.category = category)
-        );
         api.categories.get().then(c => {
             this.categories = c;
         });

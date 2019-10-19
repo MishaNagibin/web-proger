@@ -1,7 +1,7 @@
 <template>
     <main class="v-laravel">
         <section class="container">
-            <cCoursesBackendFilter />
+            <cCoursesBackendFilter :lang="'Laravel'" />
         </section>
     </main>
 </template>
@@ -12,10 +12,7 @@ import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
     name: "Laravel",
-    components: { cCoursesBackendFilter },
-    mounted() {
-        this.$root.$emit("lang", "Laravel");
-    }
+    components: { cCoursesBackendFilter }
 });
 </script>
 

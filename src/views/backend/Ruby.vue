@@ -1,7 +1,7 @@
 <template>
     <main class="v-ruby">
         <section class="container">
-            <cCoursesBackendFilter />
+            <cCoursesBackendFilter :lang="'Ruby'" />
         </section>
     </main>
 </template>
@@ -12,10 +12,7 @@ import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
     name: "Ruby",
-    components: { cCoursesBackendFilter },
-    mounted() {
-        this.$root.$emit("lang", "Ruby");
-    }
+    components: { cCoursesBackendFilter }
 });
 </script>
 

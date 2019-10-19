@@ -1,7 +1,7 @@
 <template>
     <main class="v-java">
         <section class="container">
-            <cCoursesBackendFilter />
+            <cCoursesBackendFilter :lang="'Java'" />
         </section>
     </main>
 </template>
@@ -12,10 +12,7 @@ import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
     name: "Java",
-    components: { cCoursesBackendFilter },
-    mounted() {
-        this.$root.$emit("lang", "Java");
-    }
+    components: { cCoursesBackendFilter }
 });
 </script>
 

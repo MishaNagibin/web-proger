@@ -114,16 +114,28 @@ const courses = [
     //     category: "Frontend",
     //     lang: "Nuxt"
     // },
-    // {
-    //     ID: 11,
-    //     name: "Yii2",
-    //     description:
-    //         "Yii — объектно-ориентированный компонентный фреймворк, написанный на PHP и реализующий парадигму MVC.",
-    //     image: "yii2.jpg",
-    //     slug: "yii2",
-    //     category: "Backend",
-    //     lang: "Yii"
-    // },
+    {
+        ID: 11,
+        name: "Yii2",
+        description:
+            "Yii — объектно-ориентированный компонентный фреймворк, написанный на PHP и реализующий парадигму MVC.",
+        image: "yii2.jpg",
+        slug: "yii2",
+        category: "Backend",
+        lang: "Yii",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
     // {
     //     ID: 13,
     //     name: "Основы Node.js",

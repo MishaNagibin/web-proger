@@ -32,19 +32,23 @@ import api from "@/api";
 import cCourses from "@/components/Courses.vue";
 
 export default Vue.extend({
-    name: "CoursesBackendFilter",
+    // TODO: переписать компонент как фронт
+    name: "cCoursesBackendFilter",
+    props: {
+        lang: {
+            type: String
+        }
+    },
     components: {
         cCourses
     },
     data() {
         return {
             courses: [] as Courses[],
-            categoriesBackend: [] as Categories[],
-            lang: undefined as string | undefined
+            categoriesBackend: [] as Categories[]
         };
     },
     created() {
-        this.$root.$on("lang", (lang: string) => (this.lang = lang));
         api.courses.get().then(c => {
             this.courses = c;
         });

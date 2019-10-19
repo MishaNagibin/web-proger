@@ -1,7 +1,7 @@
 <template>
     <main class="v-python">
         <section class="container">
-            <cCoursesBackendFilter />
+            <cCoursesBackendFilter :lang="'Python'" />
         </section>
     </main>
 </template>
@@ -12,10 +12,7 @@ import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
     name: "Python",
-    components: { cCoursesBackendFilter },
-    mounted() {
-        this.$root.$emit("lang", "Python");
-    }
+    components: { cCoursesBackendFilter }
 });
 </script>
 

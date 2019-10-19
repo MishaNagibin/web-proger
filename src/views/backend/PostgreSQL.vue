@@ -1,7 +1,7 @@
 <template>
     <main class="v-postgresql">
         <section class="container">
-            <cCoursesBackendFilter />
+            <cCoursesBackendFilter :lang="'PostgreSQL'" />
         </section>
     </main>
 </template>
@@ -12,10 +12,7 @@ import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
     name: "PostgreSQL",
-    components: { cCoursesBackendFilter },
-    mounted() {
-        this.$root.$emit("lang", "PostgreSQL");
-    }
+    components: { cCoursesBackendFilter }
 });
 </script>
 

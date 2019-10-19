@@ -1,7 +1,7 @@
 <template>
     <main class="v-slim">
         <section class="container">
-            <cCoursesBackendFilter />
+            <cCoursesBackendFilter :lang="'Slim'" />
         </section>
     </main>
 </template>
@@ -12,10 +12,7 @@ import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
 export default Vue.extend({
     name: "Slim",
-    components: { cCoursesBackendFilter },
-    mounted() {
-        this.$root.$emit("lang", "Slim");
-    }
+    components: { cCoursesBackendFilter }
 });
 </script>
 
