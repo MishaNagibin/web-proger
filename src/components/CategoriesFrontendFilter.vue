@@ -28,8 +28,8 @@
 <script lang="ts">
 import Vue from "vue";
 import { Categories, CategoriesFrontend, Courses } from "@/modeles";
-import cCourses from "@/components/Courses.vue";
 import api from "@/api";
+import cCourses from "@/components/Courses.vue";
 
 export default Vue.extend({
     name: "CoursesFrontendFilter",

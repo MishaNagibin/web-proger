@@ -11,3 +11,5 @@ export interface CategoriesFrontend {
     description: string;
     slug?: string;
 }
+
+export interface CategoriesBackend extends CategoriesFrontend { }

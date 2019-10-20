@@ -36,7 +36,6 @@ export default Vue.extend({
     props: {
         lang: {
             type: String,
-            default: undefined
         }
     },
     components: {
