@@ -14,19 +14,49 @@
 import Vue from "vue";
 import cCategoriesBackendFilter from "@/components/CategoriesBackendFilter.vue";
 import cCoursesBackend from "@/components/CoursesBackend.vue";
+import { CATEGORIES_BACKEND } from "@/store/actions";
+import { CategoriesBackend } from "@/modeles";
 
 export default Vue.extend({
     name: "Backend",
     components: { cCoursesBackend, cCategoriesBackendFilter },
+    data() {
+        return {
+            categoryName: undefined as string | undefined
+        };
+    },
+    computed: {
+        categoriesBackend(): CategoriesBackend[] {
+            return this.$store.state.categoriesBackend.categoriesBackend || [];
+        }
+    },
     created() {
+        if (
+            this.$store.state.categoriesBackend.categoriesBackend === undefined
+        ) {
+            this.$store.dispatch(CATEGORIES_BACKEND.GET).then(() => {
+                this.getCategoryName();
+                this.updatedBreadcrumbs();
+            });
+        }
+        this.getCategoryName();
         this.updatedBreadcrumbs();
     },
     watch: {
         $route() {
+            this.getCategoryName();
             this.updatedBreadcrumbs();
         }
     },
     methods: {
+        getCategoryName() {
+            if (this.$store.state.categoriesBackend.categoriesBackend) {
+                this.categoryName =
+                    this.categoriesBackend.filter(
+                        c => c.slug === this.$route.params.slug
+                    )[0].name || undefined;
+            }
+        },
         updatedBreadcrumbs() {
             if (this.$route.params.slug) {
                 this.$set(this.$route.meta.breadcrumbs, 2, {
@@ -34,7 +64,7 @@ export default Vue.extend({
                     routeName: this.$route.name
                 });
                 this.$set(this.$route.meta.breadcrumbs, 3, {
-                    name: this.$route.params.slug
+                    name: this.categoryName
                 });
             } else {
                 this.$set(this.$route.meta.breadcrumbs, 2, {

@@ -1,5 +1,5 @@
 <template>
-    <main class="c-courses-backend">
+    <main class="c-courses-backend container">
         <section class="container">
             <cCoursesBackendFilter :lang="lang" />
         </section>
@@ -9,6 +9,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { CategoriesBackend } from "@/modeles";
+import { CATEGORIES_BACKEND } from "@/store/actions";
 import api from "@/api";
 import cCoursesBackendFilter from "@/components/CoursesBackendFilter.vue";
 
@@ -17,15 +18,23 @@ export default Vue.extend({
     components: { cCoursesBackendFilter },
     data() {
         return {
-            categoriesBackend: [] as CategoriesBackend[],
             lang: undefined as string | undefined
         };
     },
+    computed: {
+        categoriesBackend(): CategoriesBackend[] {
+            return this.$store.state.categoriesBackend.categoriesBackend || [];
+        }
+    },
     created() {
-        api.categoriesBackend.get().then(c => {
-            this.categoriesBackend = c;
-            this.getLang();
-        });
+        if (
+            this.$store.state.categoriesBackend.categoriesBackend === undefined
+        ) {
+            this.$store.dispatch(CATEGORIES_BACKEND.GET).then(() => {
+                this.getLang();
+            });
+        }
+        this.getLang();
     },
     watch: {
         $route() {
@@ -34,9 +43,11 @@ export default Vue.extend({
     },
     methods: {
         getLang() {
-            this.lang = this.categoriesBackend.filter(
-                c => c.slug === this.$route.params.slug
-            )[0].name;
+            if (this.$store.state.categoriesBackend.categoriesBackend) {
+                this.lang = this.categoriesBackend.filter(
+                    c => c.slug === this.$route.params.slug
+                )[0].name;
+            }
         }
     }
 });

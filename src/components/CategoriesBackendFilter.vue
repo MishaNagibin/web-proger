@@ -28,6 +28,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Categories, CategoriesBackend, Courses } from "@/modeles";
+import { COURSES, CATEGORIES_BACKEND, CATEGORIES } from "@/store/actions";
 import api from "@/api";
 import cCourses from "@/components/Courses.vue";
 
@@ -41,32 +42,36 @@ export default Vue.extend({
     components: {
         cCourses
     },
-    data() {
-        return {
-            courses: [] as Courses[],
-            categoriesBackend: [] as CategoriesBackend[],
-            categories: [] as Categories[]
-        };
+    computed: {
+        preparedCategories(): Object {
+            return this.categories.filter(c => c.route === this.$route.name);
+        },
+        courses(): Courses[] {
+            return this.$store.state.courses.courses || [];
+        },
+        categories(): Categories[] {
+            return this.$store.state.categories.categories || [];
+        },
+        categoriesBackend(): CategoriesBackend[] {
+            return this.$store.state.categoriesBackend.categoriesBackend || [];
+        }
     },
     created() {
-        api.categories.get().then(c => {
-            this.categories = c;
-        });
-        api.courses.get().then(c => {
-            this.courses = c;
-        });
-        api.categoriesBackend.get().then(c => {
-            this.categoriesBackend = c;
-        });
+        if (this.$store.state.courses.courses === undefined) {
+            this.$store.dispatch(COURSES.GET);
+        }
+        if (this.$store.state.categories.categories === undefined) {
+            this.$store.dispatch(CATEGORIES.GET);
+        }
+        if (
+            this.$store.state.categoriesBackend.categoriesBackend === undefined
+        ) {
+            this.$store.dispatch(CATEGORIES_BACKEND.GET);
+        }
     },
     methods: {
         getImgUrl(image: string) {
             return require("@/assets/images/" + image);
-        }
-    },
-    computed: {
-        preparedCategories(): Object {
-            return this.categories.filter(c => c.route === this.$route.name);
         }
     }
 });

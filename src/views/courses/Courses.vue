@@ -25,6 +25,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Categories, Courses } from "@/modeles";
+import { COURSES, CATEGORIES } from "@/store/actions";
 import api from "@/api";
 import cCourses from "@/components/Courses.vue";
 
@@ -33,19 +34,21 @@ export default Vue.extend({
     components: {
         cCourses
     },
-    data() {
-        return {
-            courses: [] as Courses[],
-            categories: [] as Categories[]
-        };
+    computed: {
+        courses(): Courses[] {
+            return this.$store.state.courses.courses || [];
+        },
+        categories(): Categories[] {
+            return this.$store.state.categories.categories || [];
+        }
     },
     created() {
-        api.courses.get().then(c => {
-            this.courses = c;
-        });
-        api.categories.get().then(c => {
-            this.categories = c;
-        });
+        if (this.$store.state.courses.courses === undefined) {
+            this.$store.dispatch(COURSES.GET);
+        }
+        if (this.$store.state.categories.categories === undefined) {
+            this.$store.dispatch(CATEGORIES.GET);
+        }
     }
 });
 </script>

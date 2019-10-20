@@ -169,7 +169,7 @@ export default Vue.extend({
                     user-select: none;
                     cursor: pointer;
                     background: $red-500;
-                    margin: 0 10px 10px 0;
+                    margin: 15px 10px 10px 0;
                     border-radius: 4px;
                     padding: 0 16px;
                     color: $gray-000;
@@ -192,8 +192,7 @@ export default Vue.extend({
             & > span {
                 margin-bottom: 10px;
                 overflow: hidden;
-                height: 80px;
-                text-overflow: ellipsis;
+                height: 75px;
                 padding-right: 20px;
             }
         }

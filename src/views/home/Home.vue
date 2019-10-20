@@ -190,12 +190,11 @@ export default Vue.extend({
                             user-select: none;
                             cursor: pointer;
                             background: $red-500;
-                            margin-right: 20px;
+                            margin: 15px 10px 10px 0;
                             border-radius: 4px;
                             padding: 0 16px;
                             color: $gray-000;
                             height: 40px;
-                            margin-bottom: 20px;
 
                             &:hover {
                                 background: $red-400;
@@ -213,6 +212,8 @@ export default Vue.extend({
 
                     & > span {
                         margin-bottom: 10px;
+                        height: 75px;
+                        overflow: hidden;
                     }
                 }
 
