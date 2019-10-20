@@ -14,8 +14,8 @@
             <router-link
                 v-for="(category, index) of categoriesBackend"
                 :key="index"
-                :to="{ name: category.route }"
-                :class="{ active: $route.name === category.route}"
+                :to="{ name: 'Backend', params: { slug: category.slug } }"
+                :class="{ active: $route.name === category.route || category.name === 'Все' }"
             >{{ category.name }}</router-link>
         </section>
         <cCourses
@@ -27,13 +27,12 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { Categories, Courses } from "@/modeles";
-import cCourses from "@/components/Courses.vue";
+import { Categories, CategoriesBackend, Courses } from "@/modeles";
 import api from "@/api";
+import cCourses from "@/components/Courses.vue";
 
 export default Vue.extend({
     name: "CoursesBackendFilter",
-    // TODO: переписать компонент как фронт
     props: {
         category: {
             type: String
@@ -45,7 +44,7 @@ export default Vue.extend({
     data() {
         return {
             courses: [] as Courses[],
-            categoriesBackend: [] as Categories[],
+            categoriesBackend: [] as CategoriesBackend[],
             categories: [] as Categories[]
         };
     },

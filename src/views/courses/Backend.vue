@@ -1,8 +1,8 @@
 <template>
     <main class="v-backend">
-        <router-view />
+        <cCoursesBackend v-if="$route.params.slug" />
         <section
-            v-show="$route.name === 'Backend'"
+            v-else
             class="container"
         >
             <cCategoriesBackendFilter :category="'Backend'" />
@@ -13,11 +13,40 @@
 <script lang="ts">
 import Vue from "vue";
 import cCategoriesBackendFilter from "@/components/CategoriesBackendFilter.vue";
+import cCoursesBackend from "@/components/CoursesBackend.vue";
 
 export default Vue.extend({
-    // TODO: переписать раздел как фронт
     name: "Backend",
-    components: { cCategoriesBackendFilter }
+    components: { cCoursesBackend, cCategoriesBackendFilter },
+    created() {
+        this.updatedBreadcrumbs();
+    },
+    watch: {
+        $route() {
+            this.updatedBreadcrumbs();
+        }
+    },
+    methods: {
+        updatedBreadcrumbs() {
+            if (this.$route.params.slug) {
+                this.$set(this.$route.meta.breadcrumbs, 2, {
+                    name: this.$route.name,
+                    routeName: this.$route.name
+                });
+                this.$set(this.$route.meta.breadcrumbs, 3, {
+                    name: this.$route.params.slug
+                });
+            } else {
+                this.$set(this.$route.meta.breadcrumbs, 2, {
+                    name: this.$route.name
+                });
+
+                if (this.$route.meta.breadcrumbs.length > 3) {
+                    this.$route.meta.breadcrumbs.pop();
+                }
+            }
+        }
+    }
 });
 </script>
 
