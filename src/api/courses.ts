@@ -24,16 +24,28 @@ const courses = [
             },
         ],
     },
-    // {
-    //     ID: 2,
-    //     name: "React",
-    //     description:
-    //         "React — JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов. React разрабатывается и поддерживается Facebook, Instagram и сообществом отдельных разработчиков и корпораций. React может использоваться для разработки одностраничных и мобильных приложений.",
-    //     image: "react.png",
-    //     slug: "react",
-    //     category: "Frontend",
-    //     lang: "React"
-    // },
+    {
+        ID: 2,
+        name: "React",
+        description:
+            "React — JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов. React разрабатывается и поддерживается Facebook, Instagram и сообществом отдельных разработчиков и корпораций. React может использоваться для разработки одностраничных и мобильных приложений.",
+        image: "react.png",
+        slug: "react",
+        category: "Frontend",
+        lang: "React",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
     // {
     //     ID: 3,
     //     name: "Angular",
@@ -136,16 +148,28 @@ const courses = [
             },
         ],
     },
-    // {
-    //     ID: 13,
-    //     name: "Основы Node.js",
-    //     description:
-    //         "Node или Node.js — программная платформа, основанная на движке V8, превращающая JavaScript из узкоспециализированного языка в язык общего назначения.",
-    //     image: "nodejs.jpg",
-    //     slug: "basics-nodejs",
-    //     category: "Backend",
-    //     lang: "NodeJS"
-    // },
+    {
+        ID: 13,
+        name: "Основы Node.js",
+        description:
+            "Node или Node.js — программная платформа, основанная на движке V8, превращающая JavaScript из узкоспециализированного языка в язык общего назначения.",
+        image: "nodejs.jpg",
+        slug: "basics-nodejs",
+        category: "Backend",
+        lang: "Node.js",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
     // {
     //     ID: 14,
     //     name: "Курс по созданию Telegram-бота",

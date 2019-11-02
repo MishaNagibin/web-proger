@@ -1,6 +1,6 @@
 <template>
     <main class="v-course">
-        <section v-if="course.ID">
+        <section v-if="course">
             <section class="content">
                 <h1>{{ course.name }}</h1>
                 <span class="description">{{ course.description }}</span>
@@ -36,6 +36,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Courses } from "@/modeles";
+import { COURSES } from "@/store/actions";
 import api from "@/api";
 
 export default Vue.extend({
@@ -54,7 +55,7 @@ export default Vue.extend({
     },
     data() {
         return {
-            course: {} as Courses,
+            course: {} as Courses | undefined,
             isPlayerResize: false,
             video: "" as string | undefined,
             lessonActive: 1 as number | undefined
@@ -63,34 +64,51 @@ export default Vue.extend({
     watch: {
         $route() {
             this.getCourse();
+            this.getVideo();
         },
         course() {
             this.updatedBreadcrumbs();
         }
     },
+    computed: {
+        courses(): Courses[] {
+            return this.$store.state.courses.courses || [];
+        }
+    },
     created() {
+        if (this.$store.state.courses.courses === undefined) {
+            this.$store.dispatch(COURSES.GET).then(() => {
+                this.getCourse();
+                this.getVideo();
+            });
+        }
         this.getCourse();
+        this.getVideo();
         this.updatedBreadcrumbs();
     },
     methods: {
         updatedBreadcrumbs() {
-            this.$set(this.$route.meta.breadcrumbs, 2, {
-                name: this.course.category,
-                routeName: this.course.category
-            });
-            this.$set(this.$route.meta.breadcrumbs, 3, {
-                name: this.course.name
-            });
+            if (this.course) {
+                this.$set(this.$route.meta.breadcrumbs, 2, {
+                    name: this.course.category,
+                    routeName: this.course.category
+                });
+                this.$set(this.$route.meta.breadcrumbs, 3, {
+                    name: this.course.name
+                });
+            }
         },
         setVideo(link: string, ID: number) {
             this.video = link;
             this.lessonActive = ID;
         },
         getCourse() {
-            api.courses.get({ ID: this.courseID } as Courses).then(c => {
-                this.course = c[0];
-                this.video = c[0].lessons[0].link;
-            });
+            this.course = this.courses.find(c => c.ID === this.courseID);
+        },
+        getVideo() {
+            if (this.course) {
+                this.video = this.course.lessons[0].link;
+            }
         },
         playerResize() {
             this.isPlayerResize = !this.isPlayerResize;
@@ -180,7 +198,6 @@ export default Vue.extend({
                     & > .player {
                         max-height: 600px;
                         height: 480px;
-                        max-width: 1080px;
                         width: 100%;
 
                         & > iframe {
@@ -221,6 +238,65 @@ export default Vue.extend({
 
                 &:focus {
                     box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.15);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .v-course {
+        & > section {
+            & > .content {
+                & > .video {
+                    & > div {
+                        flex-direction: column;
+
+                        & > .player {
+                            align-self: center;
+                        }
+
+                        & > .list {
+                            width: 100%;
+                            margin-left: unset;
+                        }
+                    }
+                }
+
+                & > button {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .v-course {
+        & > section {
+            & > .content {
+                & > .video {
+                    & > div {
+                        & > .player {
+                            height: 360px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .v-course {
+        & > section {
+            & > .content {
+                & > .video {
+                    & > div {
+                        & > .player {
+                            height: 270px;
+                        }
+                    }
                 }
             }
         }

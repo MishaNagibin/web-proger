@@ -9,19 +9,34 @@
                     >Курсы</router-link>
                 </li>
                 <li>
-                    <router-link :to="{ name: 'Technologies' }">Технологии</router-link>
+                    <router-link
+                        :to="{ name: 'Technologies' }"
+                        :class="{ active: routeName === 'Technologies' }"
+                    >Технологии</router-link>
                 </li>
                 <li>
-                    <router-link :to="{ name: 'WorldSkillsRussia' }">WorldSkills Russia</router-link>
+                    <router-link
+                        :to="{ name: 'WorldSkillsRussia' }"
+                        :class="{ active: routeName === 'WorldSkillsRussia' }"
+                    >WorldSkills Russia</router-link>
                 </li>
                 <li>
-                    <router-link :to="{ name: 'DemoExam' }">Демонстрационный экзамен</router-link>
+                    <router-link
+                        :to="{ name: 'DemoExam' }"
+                        :class="{ active: routeName === 'DemoExam' }"
+                    >Демонстрационный экзамен</router-link>
                 </li>
                 <li>
-                    <router-link :to="{ name: 'Abilimpix' }">Абилимпикс</router-link>
+                    <router-link
+                        :to="{ name: 'Abilimpix' }"
+                        :class="{ active: routeName === 'Abilimpix' }"
+                    >Абилимпикс</router-link>
                 </li>
                 <li>
-                    <router-link :to="{ name: 'ProfessionalRetrainingCourses' }">Курсы профпереподготовки</router-link>
+                    <router-link
+                        :to="{ name: 'ProfessionalRetrainingCourses' }"
+                        :class="{ active: routeName === 'ProfessionalRetrainingCourses' }"
+                    >Курсы профпереподготовки</router-link>
                 </li>
             </ul>
         </section>
@@ -29,16 +44,16 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue"
+import Vue from "vue";
 
 export default Vue.extend({
     name: "cTopNavigationBar",
     computed: {
         routeName(): string | undefined {
-            return this.$route.name
-        },
+            return this.$route.name;
+        }
     }
-})
+});
 </script>
 
 <style lang="scss">
@@ -71,7 +86,6 @@ export default Vue.extend({
                 align-items: center;
                 position: relative;
                 margin-right: 30px;
-                
 
                 & > a {
                     display: flex;
@@ -90,6 +104,12 @@ export default Vue.extend({
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .c-top-navigation-bar {
+        display: none;
     }
 }
 </style>

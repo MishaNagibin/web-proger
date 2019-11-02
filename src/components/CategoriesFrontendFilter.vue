@@ -28,6 +28,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Categories, CategoriesFrontend, Courses } from "@/modeles";
+import { COURSES, CATEGORIES_FRONTEND, CATEGORIES } from "@/store/actions";
 import api from "@/api";
 import cCourses from "@/components/Courses.vue";
 
@@ -41,32 +42,39 @@ export default Vue.extend({
     components: {
         cCourses
     },
-    data() {
-        return {
-            courses: [] as Courses[],
-            categoriesFrontend: [] as CategoriesFrontend[],
-            categories: [] as Categories[]
-        };
+    computed: {
+        preparedCategories(): Object {
+            return this.categories.filter(c => c.route === this.$route.name);
+        },
+        courses(): Courses[] {
+            return this.$store.state.courses.courses || [];
+        },
+        categories(): Categories[] {
+            return this.$store.state.categories.categories || [];
+        },
+        categoriesFrontend(): CategoriesFrontend[] {
+            return (
+                this.$store.state.categoriesFrontend.categoriesFrontend || []
+            );
+        }
     },
     created() {
-        api.courses.get().then(c => {
-            this.courses = c;
-        });
-        api.categoriesFrontend.get().then(c => {
-            this.categoriesFrontend = c;
-        });
-        api.categories.get().then(c => {
-            this.categories = c;
-        });
+        if (this.$store.state.courses.courses === undefined) {
+            this.$store.dispatch(COURSES.GET);
+        }
+        if (this.$store.state.categories.categories === undefined) {
+            this.$store.dispatch(CATEGORIES.GET);
+        }
+        if (
+            this.$store.state.categoriesFrontend.categoriesFrontend ===
+            undefined
+        ) {
+            this.$store.dispatch(CATEGORIES_FRONTEND.GET);
+        }
     },
     methods: {
         getImgUrl(image: string) {
             return require("@/assets/images/" + image);
-        }
-    },
-    computed: {
-        preparedCategories(): Object {
-            return this.categories.filter(c => c.route === this.$route.name);
         }
     }
 });
@@ -114,6 +122,8 @@ export default Vue.extend({
             margin: 5px;
             text-align: center;
             align-self: center;
+            border-radius: 4px;
+            background-color: $gray-300;
 
             &:hover {
                 color: $gray-000;

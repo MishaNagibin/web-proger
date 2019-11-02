@@ -8,9 +8,9 @@
                 v-for="(b, i) of breadcrumbs"
                 :key="i"
             >
-                <span class="arrow">→</span>
+                <span class="icon arrow-forward"></span>
                 <span
-                    :class="{ linked: b.routeName }"
+                    :class="{ 'not-linked': !b.routeName }"
                     @click="routeTo(i)"
                 >{{ b.name }}</span>
             </li>
@@ -56,47 +56,46 @@ export default Vue.extend({
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
-    max-width: 1600px;
-    padding: 0 20px;
-    margin: 20px 0 0 0;
+    max-width: 1560px;
+    width: 100%;
+    margin: 20px auto;
 
     & > ul {
         display: flex;
         user-select: none;
-        padding: 0;
+        flex-wrap: wrap;
+        padding: 0 20px;
         margin: 0;
 
         & > li {
-            margin-right: 10px;
-            display: inline-block;
+            display: flex;
+            align-items: center;
 
             &:first-child {
-                height: 39px;
-                display: flex;
-                align-items: center;
-
-                & > .arrow {
+                & > .icon {
                     display: none;
                 }
-
-                & > span {
-                    margin-top: 6px;
-                }
             }
 
-            & > .arrow {
-                margin-top: -10px;
-                margin-right: 10px;
-                font-size: 26px;
-                cursor: default;
+            & > .icon {
+                background-color: $gray-500;
             }
 
-            & > .linked {
+            & > span {
+                color: $red-500;
                 cursor: pointer;
 
                 &:hover {
-                    color: $red-500;
+                    color: $red-600;
+                }
+            }
+
+            & > .not-linked {
+                color: unset;
+                cursor: default;
+
+                &:hover {
+                    color: unset;
                 }
             }
         }

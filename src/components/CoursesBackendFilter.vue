@@ -28,6 +28,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { CategoriesBackend, Courses } from "@/modeles";
+import { COURSES, CATEGORIES_BACKEND } from "@/store/actions";
 import api from "@/api";
 import cCourses from "@/components/Courses.vue";
 
@@ -41,30 +42,32 @@ export default Vue.extend({
     components: {
         cCourses
     },
-    data() {
-        return {
-            courses: [] as Courses[],
-            categoriesBackend: [] as CategoriesBackend[]
-        };
-    },
-    created() {
-        api.courses.get().then(c => {
-            this.courses = c;
-        });
-        api.categoriesBackend.get().then(c => {
-            this.categoriesBackend = c;
-        });
-    },
-    methods: {
-        getImgUrl(image: string) {
-            return require("@/assets/images/" + image);
-        }
-    },
     computed: {
         preparedCategories(): Object {
             return this.categoriesBackend.filter(
                 c => c.slug === this.$route.params.slug
             );
+        },
+        courses(): Courses[] {
+            return this.$store.state.courses.courses || [];
+        },
+        categoriesBackend(): CategoriesBackend[] {
+            return this.$store.state.categoriesBackend.categoriesBackend || [];
+        }
+    },
+    created() {
+        if (this.$store.state.courses.courses === undefined) {
+            this.$store.dispatch(COURSES.GET);
+        }
+        if (
+            this.$store.state.categoriesBackend.categoriesBackend === undefined
+        ) {
+            this.$store.dispatch(CATEGORIES_BACKEND.GET);
+        }
+    },
+    methods: {
+        getImgUrl(image: string) {
+            return require("@/assets/images/" + image);
         }
     }
 });
@@ -112,6 +115,8 @@ export default Vue.extend({
             margin: 5px;
             text-align: center;
             align-self: center;
+            border-radius: 4px;
+            background-color: $gray-300;
 
             &:hover {
                 color: $gray-000;

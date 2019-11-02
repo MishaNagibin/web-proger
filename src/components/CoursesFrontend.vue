@@ -9,6 +9,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { CategoriesFrontend } from "@/modeles";
+import { CATEGORIES_FRONTEND } from "@/store/actions";
 import api from "@/api";
 import cCoursesFrontendFilter from "@/components/CoursesFrontendFilter.vue";
 
@@ -17,15 +18,26 @@ export default Vue.extend({
     components: { cCoursesFrontendFilter },
     data() {
         return {
-            categoriesFrontend: [] as CategoriesFrontend[],
             lang: undefined as string | undefined
         };
     },
+    computed: {
+        categoriesFrontend(): CategoriesFrontend[] {
+            return (
+                this.$store.state.categoriesFrontend.categoriesFrontend || []
+            );
+        }
+    },
     created() {
-        api.categoriesFrontend.get().then(c => {
-            this.categoriesFrontend = c;
-            this.getLang();
-        });
+        if (
+            this.$store.state.categoriesFrontend.categoriesFrontend ===
+            undefined
+        ) {
+            this.$store.dispatch(CATEGORIES_FRONTEND.GET).then(() => {
+                this.getLang();
+            });
+        }
+        this.getLang();
     },
     watch: {
         $route() {
@@ -34,9 +46,11 @@ export default Vue.extend({
     },
     methods: {
         getLang() {
-            this.lang = this.categoriesFrontend.filter(
-                c => c.slug === this.$route.params.slug
-            )[0].name;
+            if (this.$store.state.categoriesFrontend.categoriesFrontend) {
+                this.lang = this.categoriesFrontend.filter(
+                    c => c.slug === this.$route.params.slug
+                )[0].name;
+            }
         }
     }
 });

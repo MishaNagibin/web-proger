@@ -20,25 +20,26 @@
                     <router-link :to="{ name: 'Modeling' }">Моделирование</router-link>
                 </span>
             </div>
-
             <section class="last-added-courses">
                 <h2>Последние добавленные курсы</h2>
-                <div
-                    v-for="(course, index) of preparedCourses"
-                    :key="index"
-                >
-                    <router-link :to="{ name: 'Course', params: { courseID: course.ID, courseSlug: course.slug } }">
-                        <span>{{ course.category }}</span>
-                        <img :src="getImgUrl(course.image)" />
-                    </router-link>
-                    <div class="info">
-                        <h3>{{ course.name }}</h3>
-                        <span>{{ course.description }}</span>
+                <section>
+                    <div
+                        v-for="(course, index) of preparedCourses"
+                        :key="index"
+                    >
                         <router-link :to="{ name: 'Course', params: { courseID: course.ID, courseSlug: course.slug } }">
-                            <button>Посмотреть</button>
+                            <span>{{ course.category }}</span>
+                            <img :src="getImgUrl(course.image)" />
                         </router-link>
+                        <div class="info">
+                            <h3>{{ course.name }}</h3>
+                            <span>{{ course.description }}</span>
+                            <router-link :to="{ name: 'Course', params: { courseID: course.ID, courseSlug: course.slug } }">
+                                <button>Посмотреть</button>
+                            </router-link>
+                        </div>
                     </div>
-                </div>
+                </section>
                 <router-link :to="{ name: 'Courses' }">
                     <button>Все курсы</button>
                 </router-link>
@@ -95,6 +96,7 @@ export default Vue.extend({
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
 
             & > h1 {
                 font-size: 26px;
@@ -109,11 +111,11 @@ export default Vue.extend({
             height: fit-content;
             background-color: $gray-200;
             margin: 20px 0;
-            padding: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
             border-radius: 4px;
+            text-align: center;
 
             & > span {
                 display: flex;
@@ -147,77 +149,95 @@ export default Vue.extend({
             max-width: 1200px;
             align-items: center;
 
-            & > div {
-                margin: 20px 0;
-                background-color: $gray-200;
-                display: flex;
+            & > h2 {
+                text-align: center;
+            }
 
-                & > a {
-                    text-decoration: none;
+            & > section {
+                & > div {
+                    margin: 20px 0;
+                    background-color: $gray-200;
                     display: flex;
-                    align-self: center;
-                    color: $gray-000;
-                    position: relative;
-
-                    & > span {
-                        position: absolute;
-                        background-color: $red-500;
-                        padding: 5px;
-                    }
-
-                    & > img {
-                        width: 350px;
-                    }
-                }
-
-                & > .info {
-                    display: flex;
-                    flex-direction: column;
-                    margin-left: 20px;
-
-                    & > h3 {
-                        margin: 0;
-                    }
+                    max-height: 175px;
 
                     & > a {
-                        display: flex;
-                        align-self: flex-end;
                         text-decoration: none;
+                        display: flex;
+                        align-self: center;
+                        color: $gray-000;
+                        position: relative;
+                        overflow: hidden;
+                        max-width: 350px;
+                        min-width: 350px;
+                        width: 100%;
 
-                        & > button {
-                            border: 1px solid $red-500;
-                            outline: none;
-                            user-select: none;
-                            cursor: pointer;
-                            background: $red-500;
-                            margin-right: 20px;
-                            border-radius: 4px;
-                            padding: 0 16px;
-                            color: $gray-000;
-                            height: 40px;
-                            margin-bottom: 20px;
+                        & > span {
+                            position: absolute;
+                            background-color: $red-500;
+                            padding: 5px;
+                        }
 
+                        & > img {
                             &:hover {
-                                background: $red-400;
-                            }
-
-                            &:active {
-                                background: $red-600;
-                            }
-
-                            &:focus {
-                                box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.15);
+                                transition: 1s;
+                                transform: scale(1.1);
                             }
                         }
                     }
 
-                    & > span {
-                        margin-bottom: 10px;
-                    }
-                }
+                    & > .info {
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 20px;
+                        justify-content: space-between;
+                        min-height: 180px;
 
-                &:hover {
-                    box-shadow: 0 0 10px 3px $gray-500;
+                        & > h3 {
+                            margin: 0;
+                        }
+
+                        & > a {
+                            display: flex;
+                            align-self: flex-end;
+                            text-decoration: none;
+
+                            & > button {
+                                border: 1px solid $red-500;
+                                outline: none;
+                                user-select: none;
+                                cursor: pointer;
+                                background: $red-500;
+                                margin: 15px 10px 15px 0;
+                                border-radius: 4px;
+                                padding: 0 16px;
+                                color: $gray-000;
+                                height: 40px;
+
+                                &:hover {
+                                    background: $red-400;
+                                }
+
+                                &:active {
+                                    background: $red-600;
+                                }
+
+                                &:focus {
+                                    box-shadow: 0 0 0 2px
+                                        rgba(63, 81, 181, 0.15);
+                                }
+                            }
+                        }
+
+                        & > span {
+                            margin-bottom: 10px;
+                            height: 75px;
+                            overflow: hidden;
+                        }
+                    }
+
+                    &:hover {
+                        box-shadow: 0 0 10px 3px $gray-500;
+                    }
                 }
             }
 
@@ -235,7 +255,7 @@ export default Vue.extend({
                     padding: 0 16px;
                     color: $gray-000;
                     height: 40px;
-                    margin-bottom: 20px;
+                    margin: 20px 0;
                     width: 200px;
 
                     &:hover {
@@ -248,6 +268,94 @@ export default Vue.extend({
 
                     &:focus {
                         box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.15);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .v-home {
+        & > .container {
+            & > .last-added-courses {
+                & > section {
+                    display: flex;
+                    width: 100%;
+                    flex-flow: wrap;
+                    justify-content: space-around;
+
+                    & > div {
+                        display: flex;
+                        flex-direction: column;
+                        max-width: 350px;
+                        margin: 10px;
+                        width: 100%;
+                        max-height: unset;
+                        justify-content: space-between;
+
+                        & > a {
+                            min-width: unset;
+                            
+                            & > img {
+                                max-width: 350px;
+                                width: 100%;
+                            }
+                        }
+
+                        & > .info {
+                            margin-left: unset;
+                            align-items: center;
+                            text-align: center;
+
+                            & > a {
+                                align-self: unset;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .v-home {
+        & > .container {
+            & > .last-added-courses {
+                & > section {
+                    & > div {
+                        max-width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .v-home {
+        & > .container {
+            & > .last-added-courses {
+                & > section {
+                    & > div {
+                        max-width: 250px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .v-home {
+        & > .container {
+            & > .last-added-courses {
+                & > section {
+                    justify-content: center;
+
+                    & > div {
+                        max-width: 350px;
                     }
                 }
             }

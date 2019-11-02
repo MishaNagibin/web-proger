@@ -28,6 +28,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { CategoriesFrontend, Courses } from "@/modeles";
+import { COURSES, CATEGORIES_FRONTEND } from "@/store/actions";
 import api from "@/api";
 import cCourses from "@/components/Courses.vue";
 
@@ -35,36 +36,41 @@ export default Vue.extend({
     name: "cCoursesFrontendFilter",
     props: {
         lang: {
-            type: String,
+            type: String
         }
     },
     components: {
         cCourses
-    },
-    data() {
-        return {
-            courses: [] as Courses[],
-            categoriesFrontend: [] as CategoriesFrontend[]
-        };
-    },
-    created() {
-        api.courses.get().then(c => {
-            this.courses = c;
-        });
-        api.categoriesFrontend.get().then(c => {
-            this.categoriesFrontend = c;
-        });
-    },
-    methods: {
-        getImgUrl(image: string) {
-            return require("@/assets/images/" + image);
-        }
     },
     computed: {
         preparedCategories(): Object {
             return this.categoriesFrontend.filter(
                 c => c.slug === this.$route.params.slug
             );
+        },
+        courses(): Courses[] {
+            return this.$store.state.courses.courses || [];
+        },
+        categoriesFrontend(): CategoriesFrontend[] {
+            return (
+                this.$store.state.categoriesFrontend.categoriesFrontend || []
+            );
+        }
+    },
+    created() {
+        if (this.$store.state.courses.courses === undefined) {
+            this.$store.dispatch(COURSES.GET);
+        }
+        if (
+            this.$store.state.categoriesFrontend.categoriesFrontend ===
+            undefined
+        ) {
+            this.$store.dispatch(CATEGORIES_FRONTEND.GET);
+        }
+    },
+    methods: {
+        getImgUrl(image: string) {
+            return require("@/assets/images/" + image);
         }
     }
 });
@@ -112,6 +118,8 @@ export default Vue.extend({
             margin: 5px;
             text-align: center;
             align-self: center;
+            border-radius: 4px;
+            background-color: $gray-300;
 
             &:hover {
                 color: $gray-000;
