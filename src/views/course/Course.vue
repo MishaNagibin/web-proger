@@ -198,7 +198,6 @@ export default Vue.extend({
                     & > .player {
                         max-height: 600px;
                         height: 480px;
-                        max-width: 1080px;
                         width: 100%;
 
                         & > iframe {
@@ -239,6 +238,65 @@ export default Vue.extend({
 
                 &:focus {
                     box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.15);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .v-course {
+        & > section {
+            & > .content {
+                & > .video {
+                    & > div {
+                        flex-direction: column;
+
+                        & > .player {
+                            align-self: center;
+                        }
+
+                        & > .list {
+                            width: 100%;
+                            margin-left: unset;
+                        }
+                    }
+                }
+
+                & > button {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .v-course {
+        & > section {
+            & > .content {
+                & > .video {
+                    & > div {
+                        & > .player {
+                            height: 360px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .v-course {
+        & > section {
+            & > .content {
+                & > .video {
+                    & > div {
+                        & > .player {
+                            height: 270px;
+                        }
+                    }
                 }
             }
         }

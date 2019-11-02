@@ -1,27 +1,29 @@
 <template>
     <section class="c-courses">
-        <div
-            v-for="(course, index) of preparedCourses"
-            :key="index"
-        >
-            <router-link :to="{ name: 'Course', params: { courseID: course.ID, courseSlug: course.slug } }">
-                <span>{{ course.category }}</span>
-                <img :src="getImgUrl(course.image)" />
-            </router-link>
-            <div class="info">
-                <h3>{{ course.name }}</h3>
-                <span>{{ course.description }}</span>
+        <section class="courses">
+            <div
+                v-for="(course, index) of preparedCourses"
+                :key="index"
+            >
                 <router-link :to="{ name: 'Course', params: { courseID: course.ID, courseSlug: course.slug } }">
-                    <button>Посмотреть</button>
+                    <span>{{ course.category }}</span>
+                    <img :src="getImgUrl(course.image)" />
                 </router-link>
+                <div class="info">
+                    <h3>{{ course.name }}</h3>
+                    <span>{{ course.description }}</span>
+                    <router-link :to="{ name: 'Course', params: { courseID: course.ID, courseSlug: course.slug } }">
+                        <button>Посмотреть</button>
+                    </router-link>
+                </div>
             </div>
-        </div>
-        <section>
+        </section>
+        <section class="pagination">
             <div
                 v-show="currentPage > 1"
                 @click="onPreventClick"
             >
-                <span class="icon arrow-prevent"></span>
+                <span class="icon arrow-back"></span>
             </div>
             <span
                 v-for="(pageNumber, index) of totalPages"
@@ -33,7 +35,7 @@
                 v-show="currentPage < totalPages"
                 @click="onNextClick"
             >
-                <span class="icon arrow-next"></span>
+                <span class="icon arrow-forward"></span>
             </div>
         </section>
     </section>
@@ -123,121 +125,102 @@ export default Vue.extend({
     flex-direction: column;
     align-items: center;
 
-    & > div {
-        margin: 20px 0;
-        background-color: $gray-200;
-        display: flex;
-        width: 100%;
-        height: 175px;
-
-        & > a {
-            text-decoration: none;
+    & > .courses {
+        & > div {
+            margin: 20px 0;
+            background-color: $gray-200;
             display: flex;
-            align-self: center;
-            color: $gray-000;
-            position: relative;
-
-            & > span {
-                position: absolute;
-                background-color: $red-500;
-                padding: 5px;
-            }
-
-            & > img {
-                width: 350px;
-            }
-        }
-
-        & > .info {
-            display: flex;
-            flex-direction: column;
-            margin-left: 20px;
             width: 100%;
-
-            & > h3 {
-                margin: 0;
-            }
+            max-height: 175px;
 
             & > a {
-                display: flex;
-                align-self: flex-end;
                 text-decoration: none;
+                display: flex;
+                align-self: center;
+                color: $gray-000;
+                position: relative;
+                overflow: hidden;
+                max-width: 350px;
+                min-width: 350px;
+                width: 100%;
 
-                & > button {
-                    border: 1px solid $red-500;
-                    outline: none;
-                    user-select: none;
-                    cursor: pointer;
-                    background: $red-500;
-                    margin: 15px 10px 10px 0;
-                    border-radius: 4px;
-                    padding: 0 16px;
-                    color: $gray-000;
-                    height: 40px;
+                & > span {
+                    position: absolute;
+                    background-color: $red-500;
+                    padding: 5px;
+                }
 
+                & > img {
                     &:hover {
-                        background: $red-400;
-                    }
-
-                    &:active {
-                        background: $red-600;
-                    }
-
-                    &:focus {
-                        box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.15);
+                        transition: 1s;
+                        transform: scale(1.1);
                     }
                 }
             }
 
-            & > span {
-                margin-bottom: 10px;
-                overflow: hidden;
-                height: 75px;
-                padding-right: 20px;
+            & > .info {
+                display: flex;
+                flex-direction: column;
+                margin-left: 20px;
+                width: 100%;
+                justify-content: space-between;
+                min-height: 180px;
+
+                & > h3 {
+                    margin: 0;
+                }
+
+                & > a {
+                    display: flex;
+                    align-self: flex-end;
+                    text-decoration: none;
+
+                    & > button {
+                        border: 1px solid $red-500;
+                        outline: none;
+                        user-select: none;
+                        cursor: pointer;
+                        background: $red-500;
+                        margin: 15px 10px 15px 0;
+                        border-radius: 4px;
+                        padding: 0 16px;
+                        color: $gray-000;
+                        height: 40px;
+
+                        &:hover {
+                            background: $red-400;
+                        }
+
+                        &:active {
+                            background: $red-600;
+                        }
+
+                        &:focus {
+                            box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.15);
+                        }
+                    }
+                }
+
+                & > span {
+                    margin-bottom: 10px;
+                    overflow: hidden;
+                    height: 75px;
+                    padding-right: 20px;
+                }
             }
-        }
-
-        &:hover {
-            box-shadow: 0 0 10px 3px $gray-500;
-        }
-    }
-
-    & > a {
-        display: flex;
-        text-decoration: none;
-
-        & > button {
-            border: 1px solid $red-500;
-            outline: none;
-            user-select: none;
-            cursor: pointer;
-            background: $red-500;
-            border-radius: 4px;
-            padding: 0 16px;
-            color: $gray-000;
-            height: 40px;
-            margin-bottom: 20px;
-            width: 200px;
 
             &:hover {
-                background: $red-400;
-            }
-
-            &:active {
-                background: $red-600;
-            }
-
-            &:focus {
-                box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.15);
+                box-shadow: 0 0 10px 3px $gray-500;
             }
         }
     }
 
-    & > section {
+    & > .pagination {
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
         user-select: none;
+        flex-direction: row;
 
         & > div {
             display: flex;
@@ -281,6 +264,78 @@ export default Vue.extend({
 
         & > .last::before {
             content: "...";
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .c-courses {
+        & > .courses {
+            display: flex;
+            width: 100%;
+            flex-flow: wrap;
+            justify-content: space-around;
+
+            & > div {
+                display: flex;
+                flex-direction: column;
+                max-width: 350px;
+                margin: 10px;
+                width: 100%;
+                max-height: unset;
+                justify-content: space-between;
+
+                & > a {
+                    min-width: unset;
+                    
+                    & > img {
+                        max-width: 350px;
+                        width: 100%;
+                    }
+                }
+
+                & > .info {
+                    margin-left: unset;
+                    align-items: center;
+                    text-align: center;
+
+                    & > a {
+                        align-self: unset;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .c-courses {
+        & > .courses {
+            & > div {
+                max-width: 200px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .c-courses {
+        & > .courses {
+            & > div {
+                max-width: 250px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .c-courses {
+        & > .courses {
+            justify-content: center;
+
+            & > div {
+                max-width: 350px;
+            }
         }
     }
 }

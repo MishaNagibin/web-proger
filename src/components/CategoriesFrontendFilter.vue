@@ -122,6 +122,8 @@ export default Vue.extend({
             margin: 5px;
             text-align: center;
             align-self: center;
+            border-radius: 4px;
+            background-color: $gray-300;
 
             &:hover {
                 color: $gray-000;

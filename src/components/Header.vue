@@ -2,7 +2,10 @@
     <header>
         <section class="container">
             <router-link :to="{ name: 'Home' }">
-                <span>WP</span> Web-Proger
+                <section @click="scrollToTop()">
+                    <span>WP</span>
+                    <span>Web-Proger</span>
+                </section>
             </router-link>
             <cSearch></cSearch>
             <section class="login">
@@ -21,7 +24,16 @@ import cSearch from "@/components/Search.vue";
 
 export default Vue.extend({
     name: "cHeader",
-    components: { cSearch }
+    components: { cSearch },
+    methods: {
+        scrollToTop() {
+            (document.getElementById("app") as HTMLInputElement).scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
+        }
+    }
 });
 </script>
 
@@ -45,8 +57,7 @@ header {
         height: 70px;
         width: 100%;
         max-width: 1600px;
-        padding: 0 20px;
-        margin: 0 auto;
+        padding: 0 10px;
 
         & > a {
             color: $red-500;
@@ -56,19 +67,21 @@ header {
             font-style: italic;
             white-space: nowrap;
             margin-right: 20px;
-            display: flex;
-            height: 60px;
-            align-items: center;
 
-            & > span {
-                font-style: italic;
-                width: 60px;
-                height: 60px;
-                background-color: $red-500;
-                color: $gray-000;
-                border-radius: 50%;
+            & > section {
                 display: flex;
                 align-items: center;
+
+                & > :first-child {
+                    font-style: italic;
+                    width: 60px;
+                    height: 60px;
+                    background-color: $red-500;
+                    color: $gray-000;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                }
             }
         }
 
@@ -94,6 +107,48 @@ header {
                     height: 30px;
                     mask-repeat: no-repeat;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    header {
+        & > .container {
+            & > .login {
+                & > a {
+                    & > :last-child {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    header {
+        & > .container {
+            padding: 0 10px;
+
+            & > a {
+                margin-right: 10px;
+
+                & > section {
+                    & > :last-child {
+                        display: none;
+                    }
+                }
+            }
+
+            & > .c-search {
+                & > button {
+                    margin-right: unset;
+                }
+            }
+
+            & > .login {
+                display: none;
             }
         }
     }

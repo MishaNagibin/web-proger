@@ -106,4 +106,10 @@ export default Vue.extend({
         }
     }
 }
+
+@media screen and (max-width: 850px) {
+    .c-top-navigation-bar {
+        display: none;
+    }
+}
 </style>
