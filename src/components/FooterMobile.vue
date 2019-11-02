@@ -11,15 +11,12 @@
                         <span class="icon user"></span>
                     </section>
                     <section class="info">
-                        <section class="name">Араик Микаелян</section>
-                        <section class="phone">+7 (900) 250-62-71</section>
+                        <section class="name">Миша Солнышко</section>
+                        <section class="phone">+7 (902) 756-09-57</section>
                     </section>
                     <section class="icon logout"></section>
                 </section>
                 <ul>
-                    <li>
-                        <router-link :to="{ name: 'Home' }">Мои заказы</router-link>
-                    </li>
                     <li>
                         <router-link :to="{ name: 'Home' }">Личные данные</router-link>
                     </li>
@@ -29,25 +26,16 @@
                 </ul>
                 <ul>
                     <li>
-                        <router-link :to="{ name: 'Favorites' }">Избранное</router-link>
+                        <router-link :to="{ name: 'WorldSkillsRussia' }">WorldSkills Russia</router-link>
                     </li>
                     <li>
-                        <router-link :to="{ name: 'Pharmacies' }">Адреса аптек</router-link>
+                        <router-link :to="{ name: 'DemoExam' }">Демонстрационный экзамен</router-link>
                     </li>
                     <li>
-                        <router-link :to="{ name: 'Help' }">Как сделать заказ</router-link>
+                        <router-link :to="{ name: 'Abilimpix' }">Абилимпикс</router-link>
                     </li>
                     <li>
-                        <router-link :to="{ name: 'Articles', params: { sectionName: 'news' } }">Новости</router-link>
-                    </li>
-                    <li>
-                        <router-link :to="{ name: 'Vacancy' }">Вакансии</router-link>
-                    </li>
-                    <li>
-                        <router-link :to="{ name: 'Pages', params: { slug: 'cooperation' } }">Сотрудничество</router-link>
-                    </li>
-                    <li>
-                        <router-link :to="{ name: 'About' }">О компании</router-link>
+                        <router-link :to="{ name: 'ProfessionalRetrainingCourses' }">Курсы профпереподготовки</router-link>
                     </li>
                 </ul>
             </section>

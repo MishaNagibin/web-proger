@@ -18,25 +18,31 @@
                 </div>
             </div>
         </section>
-        <section class="pagination">
-            <div
+        <section
+            v-if="listCourses.length > 10"
+            class="pagination"
+        >
+            <span
                 v-show="currentPage > 1"
                 @click="onPreventClick"
             >
                 <span class="icon arrow-back"></span>
-            </div>
+            </span>
             <span
-                v-for="(pageNumber, index) of totalPages"
-                :key="index"
-                :class="{current: currentPage === pageNumber, last: (pageNumber == totalPages && Math.abs(pageNumber - currentPage) > 3), first:(pageNumber == 1 && Math.abs(pageNumber - currentPage) > 3)}"
-                @click="setPage(pageNumber)"
-            >{{ pageNumber }}</span>
-            <div
+                v-if="currentPage > 1"
+                @click="setPage(startPage)"
+            >{{ startPage }}</span>
+            <span class="active">{{ currentPage }}</span>
+            <span
+                v-if="currentPage < totalPages "
+                @click="setPage(totalPages)"
+            >{{ totalPages }}</span>
+            <span
                 v-show="currentPage < totalPages"
                 @click="onNextClick"
             >
                 <span class="icon arrow-forward"></span>
-            </div>
+            </span>
         </section>
     </section>
 </template>
@@ -63,24 +69,11 @@ export default Vue.extend({
     },
     data() {
         return {
-            currentPage: 1 as number,
-            itemsPerPage: 10 as number,
-            resultCount: 0 as number
+            currentPage: 1,
+            itemsPerPage: 10,
+            resultCount: 0,
+            startPage: 1
         };
-    },
-    methods: {
-        getImgUrl(image: string) {
-            return require("@/assets/images/" + image);
-        },
-        setPage(pageNumber: number) {
-            this.currentPage = pageNumber;
-        },
-        onPreventClick() {
-            this.currentPage--;
-        },
-        onNextClick() {
-            this.currentPage++;
-        }
     },
     computed: {
         preparedCourses(): Object {
@@ -111,6 +104,20 @@ export default Vue.extend({
         },
         totalPages(): number {
             return Math.ceil(this.resultCount / this.itemsPerPage);
+        }
+    },
+    methods: {
+        getImgUrl(image: string) {
+            return require("@/assets/images/" + image);
+        },
+        setPage(pageNumber: number) {
+            this.currentPage = pageNumber;
+        },
+        onPreventClick() {
+            this.currentPage--;
+        },
+        onNextClick() {
+            this.currentPage++;
         }
     }
 });
@@ -221,33 +228,45 @@ export default Vue.extend({
         margin-bottom: 20px;
         user-select: none;
         flex-direction: row;
+        align-items: center;
 
         & > div {
             display: flex;
             align-items: center;
+            padding: 10px 20px;
+        }
+
+        & > span {
+            margin: 5px 5px;
+            height: 44px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            background-color: $gray-200;
+            cursor: pointer;
 
             & > .icon {
-                background-color: $gray-900;
+                mask-repeat: no-repeat;
+                background-color: $gray-700;
             }
 
             &:hover {
                 background-color: $gray-300;
                 cursor: pointer;
+
+                & > .icon {
+                    background-color: $red-500;
+                }
             }
         }
 
-        & > span {
-            margin: 5px 5px;
-            cursor: pointer;
-
-            padding: 10px 20px;
-
-            &:hover {
-                background-color: $gray-300;
-            }
+        & > :first-child,
+        & > :last-child {
+            padding: 0 10px;
+            margin: 0;
         }
 
-        & > .current {
+        & > .active {
             color: $gray-000;
             background-color: $red-500;
             font-weight: bold;
@@ -256,14 +275,6 @@ export default Vue.extend({
             &:hover {
                 background-color: $red-500;
             }
-        }
-
-        & > .first::after {
-            content: "...";
-        }
-
-        & > .last::before {
-            content: "...";
         }
     }
 }
@@ -287,7 +298,7 @@ export default Vue.extend({
 
                 & > a {
                     min-width: unset;
-                    
+
                     & > img {
                         max-width: 350px;
                         width: 100%;

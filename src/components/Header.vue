@@ -49,6 +49,8 @@ header {
     top: 0;
     background-color: rgba(255, 255, 255, 0.8);
     box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1600px;
 
     & > .container {
         display: flex;
