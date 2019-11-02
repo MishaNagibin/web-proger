@@ -46,6 +46,2184 @@ const courses = [
             },
         ],
     },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 1,
+        name: "Курс по Vue от WebForMySelf",
+        description:
+            "Vue.js — JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов. Легко интегрируется в проекты с использованием других JavaScript-библиотек. Может функционировать как веб-фреймворк для разработки одностраничных приложений в реактивном стиле.",
+        image: "vue.jpg",
+        slug: "vue-from-webformyself",
+        category: "Frontend",
+        lang: "Vue",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
     // {
     //     ID: 3,
     //     name: "Angular",

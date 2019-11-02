@@ -18,7 +18,10 @@
                 </div>
             </div>
         </section>
-        <section class="pagination">
+        <section
+            v-if="listCourses.length > 10"
+            class="pagination"
+        >
             <div
                 v-show="currentPage > 1"
                 @click="onPreventClick"
@@ -287,7 +290,7 @@ export default Vue.extend({
 
                 & > a {
                     min-width: unset;
-                    
+
                     & > img {
                         max-width: 350px;
                         width: 100%;

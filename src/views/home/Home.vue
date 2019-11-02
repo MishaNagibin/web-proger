@@ -123,7 +123,6 @@ export default Vue.extend({
                 flex-wrap: wrap;
 
                 & > a {
-                    margin: 0 20px 20px 0;
                     background-color: $gray-300;
                     width: 180px;
                     text-align: center;
@@ -132,6 +131,7 @@ export default Vue.extend({
                     text-decoration: none;
                     color: $gray-900;
                     align-self: center;
+                    margin: 0 20px 20px 20px;
 
                     &:hover {
                         box-shadow: 0 0 10px 3px $gray-500;
@@ -296,7 +296,7 @@ export default Vue.extend({
 
                         & > a {
                             min-width: unset;
-                            
+
                             & > img {
                                 max-width: 350px;
                                 width: 100%;
@@ -362,4 +362,17 @@ export default Vue.extend({
         }
     }
 }
+
+// @media screen and (max-width: 540px) {
+//     .v-home {
+//         & > .container {
+//             & > .popular-categories {
+//                 & > span {
+//                     flex-direction: column;
+//                     justify-content: center;
+//                 }
+//             }
+//         }
+//     }
+// }
 </style>
