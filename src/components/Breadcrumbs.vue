@@ -77,10 +77,6 @@ export default Vue.extend({
                 }
             }
 
-            & > .icon {
-                background-color: $gray-500;
-            }
-
             & > span {
                 color: $red-500;
                 cursor: pointer;
@@ -88,6 +84,11 @@ export default Vue.extend({
                 &:hover {
                     color: $red-600;
                 }
+            }
+
+            & > .icon {
+                background-color: $gray-500;
+                cursor: default;
             }
 
             & > .not-linked {
