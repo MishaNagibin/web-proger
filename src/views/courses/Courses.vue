@@ -1,12 +1,8 @@
 <template>
     <main class="v-courses">
-        <router-view />
-        <section
-            v-show="$route.name === 'Courses'"
-            class="container"
-        >
-            <cCategories />
-            <cCourses :listCourses="courses" />
+        <section class="container">
+            <cCategories :categoryName="$route.name" />
+            <cCourses :listCourses="preparedCourses" />
         </section>
     </main>
 </template>
@@ -16,26 +12,66 @@ import Vue from "vue";
 import { Categories, Courses } from "@/modeles";
 import { COURSES, CATEGORIES } from "@/store/actions";
 import api from "@/api";
-import cCourses from "@/components/Courses.vue";
 import cCategories from "@/components/Categories.vue";
+import cCourses from "@/components/Courses.vue";
 
 export default Vue.extend({
     name: "Courses",
-    components: { cCourses, cCategories },
+    components: { cCategories, cCourses },
     computed: {
         courses(): Courses[] {
             return this.$store.state.courses.courses || [];
         },
-        categories(): Categories[] {
-            return this.$store.state.categories.categories || [];
+        preparedCourses(): Courses[] {
+            return this.courses.filter(c =>
+                this.$route.params.slug
+                    ? c.lang.toLowerCase() === this.$route.params.slug
+                    : this.$route.name === "Courses"
+                    ? c
+                    : c.category === this.$route.name
+            );
+        }
+    },
+    watch: {
+        $route() {
+            this.updatedBreadcrumbs();
+        },
+        preparedCourses() {
+            this.updatedBreadcrumbs();
         }
     },
     created() {
         if (this.$store.state.courses.courses === undefined) {
             this.$store.dispatch(COURSES.GET);
         }
-        if (this.$store.state.categories.categories === undefined) {
-            this.$store.dispatch(CATEGORIES.GET, this.$route.name);
+        this.updatedBreadcrumbs();
+    },
+    methods: {
+        updatedBreadcrumbs() {
+            if (this.$route.params.slug && this.preparedCourses.length > 0) {
+                this.$set(this.$route.meta.breadcrumbs, 2, {
+                    name: this.$route.name,
+                    routeName: this.$route.name
+                });
+                this.$set(this.$route.meta.breadcrumbs, 3, {
+                    name: this.preparedCourses[0].lang
+                });
+            } else {
+                this.$set(this.$route.meta.breadcrumbs, 2, {
+                    name: this.$route.name
+                });
+
+                if (this.$route.meta.breadcrumbs.length > 3) {
+                    this.$route.meta.breadcrumbs.pop();
+                }
+            }
+
+            if (
+                this.$route.name === "Courses" &&
+                this.$route.meta.breadcrumbs.length > 2
+            ) {
+                this.$route.meta.breadcrumbs.pop();
+            }
         }
     }
 });

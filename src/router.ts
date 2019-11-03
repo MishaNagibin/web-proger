@@ -3,8 +3,6 @@ import Router from 'vue-router'
 import vHome from '@/views/home/Home.vue'
 import vCourses from '@/views/courses/Courses.vue'
 import vCourse from '@/views/course/Course.vue';
-import vFrontend from '@/views/courses/Frontend.vue'
-import vBackend from '@/views/courses/Backend.vue'
 
 Vue.use(Router)
 
@@ -41,7 +39,7 @@ export default new Router({
                 {
                     name: "Frontend",
                     path: "frontend/:slug?",
-                    component: vFrontend,
+                    component: vCourses,
                     props: true,
                     meta: {
                         title: `${SITE_TITLE} | Frontend`,
@@ -55,7 +53,7 @@ export default new Router({
                 {
                     name: "Backend",
                     path: "backend/:slug?",
-                    component: vBackend,
+                    component: vCourses,
                     props: true,
                     meta: {
                         title: `${SITE_TITLE} | Backend`,
