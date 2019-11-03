@@ -156,7 +156,7 @@ const courses = [
         image: "nodejs.jpg",
         slug: "basics-nodejs",
         category: "Backend",
-        lang: "Node.js",
+        lang: "Nodejs",
         lessons: [
             {
                 ID: 1,

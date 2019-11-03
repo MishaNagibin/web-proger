@@ -1,70 +1,57 @@
 <template>
     <main class="v-backend">
-        <cCoursesBackend v-if="$route.params.slug" />
-        <section
-            v-else
-            class="container"
-        >
-            <cCategoriesBackendFilter :category="'Backend'" />
+        <section class="container">
+            <cCategories :categoryName="'Backend'" />
+            <cCourses :listCourses="preparedCourses" />
         </section>
     </main>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import cCategoriesBackendFilter from "@/components/CategoriesBackendFilter.vue";
-import cCoursesBackend from "@/components/CoursesBackend.vue";
-import { CATEGORIES_BACKEND } from "@/store/actions";
-import { CategoriesBackend } from "@/modeles";
+import { Courses } from "@/modeles";
+import { COURSES } from "@/store/actions";
+import cCategories from "@/components/Categories.vue";
+import cCourses from "@/components/Courses.vue";
 
 export default Vue.extend({
     name: "Backend",
-    components: { cCoursesBackend, cCategoriesBackendFilter },
-    data() {
-        return {
-            categoryName: undefined as string | undefined
-        };
-    },
+    components: { cCategories, cCourses },
     computed: {
-        categoriesBackend(): CategoriesBackend[] {
-            return this.$store.state.categoriesBackend.categoriesBackend || [];
+        courses(): Courses[] {
+            return this.$store.state.courses.courses || [];
+        },
+        preparedCourses(): Courses[] {
+            return this.courses.filter(c =>
+                this.$route.params.slug
+                    ? c.lang.toLowerCase() === this.$route.params.slug
+                    : c.category === this.$route.name
+            );
         }
-    },
-    created() {
-        if (
-            this.$store.state.categoriesBackend.categoriesBackend === undefined
-        ) {
-            this.$store.dispatch(CATEGORIES_BACKEND.GET).then(() => {
-                this.getCategoryName();
-                this.updatedBreadcrumbs();
-            });
-        }
-        this.getCategoryName();
-        this.updatedBreadcrumbs();
     },
     watch: {
         $route() {
-            this.getCategoryName();
+            this.updatedBreadcrumbs();
+        },
+        preparedCourses() {
             this.updatedBreadcrumbs();
         }
     },
+    created() {
+        if (this.$store.state.courses.courses === undefined) {
+            this.$store.dispatch(COURSES.GET);
+        }
+        this.updatedBreadcrumbs();
+    },
     methods: {
-        getCategoryName() {
-            if (this.$store.state.categoriesBackend.categoriesBackend) {
-                this.categoryName =
-                    this.categoriesBackend.filter(
-                        c => c.slug === this.$route.params.slug
-                    )[0].name || undefined;
-            }
-        },
         updatedBreadcrumbs() {
-            if (this.$route.params.slug) {
+            if (this.$route.params.slug && this.preparedCourses.length > 0) {
                 this.$set(this.$route.meta.breadcrumbs, 2, {
                     name: this.$route.name,
                     routeName: this.$route.name
                 });
                 this.$set(this.$route.meta.breadcrumbs, 3, {
-                    name: this.categoryName
+                    name: this.preparedCourses[0].lang
                 });
             } else {
                 this.$set(this.$route.meta.breadcrumbs, 2, {

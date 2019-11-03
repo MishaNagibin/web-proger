@@ -1,8 +1,11 @@
 <template>
-    <section class="c-courses-frontend-filter">
-        <section class="description">
+    <section class="c-categories">
+        <section
+            v-if="categoryDescription.length > 0 && categoryDescription[0].description"
+            class="description"
+        >
             <span
-                v-for="(category, index) of preparedCategories"
+                v-for="(category, index) of categoryDescription"
                 :key="index"
             >{{ category.description }}</span>
         </section>
@@ -12,69 +15,48 @@
                 <span>Фильтр</span>
             </span>
             <router-link
-                v-for="(category, index) of categoriesFrontend"
+                v-for="(category, index) of categories"
                 :key="index"
-                :to="{ name: 'Frontend', params: { slug: category.slug } }"
-                :class="{ active: $route.name === category.route || category.name === 'Все' }"
+                :to="category.route ? { name: category.route } : { name: categoryName || category.route, params: { slug: category.slug || categoryName } } "
+                :class="{ active: $route.params.slug ? category.slug === $route.params.slug : $route.name === category.route }"
             >{{ category.name }}</router-link>
         </section>
-        <cCourses
-            :listCourses="courses"
-            :categoryCourse="category"
-        />
     </section>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import { Categories, CategoriesFrontend, Courses } from "@/modeles";
-import { COURSES, CATEGORIES_FRONTEND, CATEGORIES } from "@/store/actions";
+import { CATEGORIES } from "@/store/actions";
+import { Subcategories } from "@/modeles";
 import api from "@/api";
-import cCourses from "@/components/Courses.vue";
 
 export default Vue.extend({
-    name: "CoursesFrontendFilter",
+    name: "Categories",
     props: {
-        category: {
+        categoryName: {
             type: String
         }
     },
-    components: {
-        cCourses
-    },
     computed: {
-        preparedCategories(): Object {
-            return this.categories.filter(c => c.route === this.$route.name);
-        },
-        courses(): Courses[] {
-            return this.$store.state.courses.courses || [];
-        },
-        categories(): Categories[] {
+        categories(): Subcategories[] {
             return this.$store.state.categories.categories || [];
         },
-        categoriesFrontend(): CategoriesFrontend[] {
+        categoryDescription(): Subcategories[] {
             return (
-                this.$store.state.categoriesFrontend.categoriesFrontend || []
+                this.categories.filter(
+                    c => c.slug === this.$route.params.slug
+                ) || this.categories[0]
             );
         }
     },
-    created() {
-        if (this.$store.state.courses.courses === undefined) {
-            this.$store.dispatch(COURSES.GET);
-        }
-        if (this.$store.state.categories.categories === undefined) {
-            this.$store.dispatch(CATEGORIES.GET);
-        }
-        if (
-            this.$store.state.categoriesFrontend.categoriesFrontend ===
-            undefined
-        ) {
-            this.$store.dispatch(CATEGORIES_FRONTEND.GET);
+    watch: {
+        $route() {
+            this.$store.dispatch(CATEGORIES.GET, this.$route.name);
         }
     },
-    methods: {
-        getImgUrl(image: string) {
-            return require("@/assets/images/" + image);
+    created() {
+        if (this.$store.state.categories.categories === undefined) {
+            this.$store.dispatch(CATEGORIES.GET, this.$route.name);
         }
     }
 });
@@ -84,7 +66,7 @@ export default Vue.extend({
 @import "../styles/colors";
 @import "../styles/icons";
 
-.c-courses-frontend-filter {
+.c-categories {
     & > .description {
         padding: 20px;
         background-color: $red-500;

@@ -5,18 +5,7 @@
             v-show="$route.name === 'Courses'"
             class="container"
         >
-            <section class="filter">
-                <span>
-                    <span class="icon filter"></span>
-                    <span>Фильтр</span>
-                </span>
-                <router-link
-                    v-for="(category, index) of categories"
-                    :key="index"
-                    :to="{ name: category.route }"
-                    :class="{ active: $route.name === category.route}"
-                >{{ category.name }}</router-link>
-            </section>
+            <cCategories />
             <cCourses :listCourses="courses" />
         </section>
     </main>
@@ -28,12 +17,11 @@ import { Categories, Courses } from "@/modeles";
 import { COURSES, CATEGORIES } from "@/store/actions";
 import api from "@/api";
 import cCourses from "@/components/Courses.vue";
+import cCategories from "@/components/Categories.vue";
 
 export default Vue.extend({
     name: "Courses",
-    components: {
-        cCourses
-    },
+    components: { cCourses, cCategories },
     computed: {
         courses(): Courses[] {
             return this.$store.state.courses.courses || [];
@@ -47,7 +35,7 @@ export default Vue.extend({
             this.$store.dispatch(COURSES.GET);
         }
         if (this.$store.state.categories.categories === undefined) {
-            this.$store.dispatch(CATEGORIES.GET);
+            this.$store.dispatch(CATEGORIES.GET, this.$route.name);
         }
     }
 });
