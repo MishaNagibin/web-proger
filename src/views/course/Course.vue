@@ -130,7 +130,7 @@ export default Vue.extend({
         & > .content {
             background-color: $gray-200;
             border-radius: 4px;
-            padding: 10px;
+            padding: 10px; 
             margin: 20px 0;
 
             & > .video {
