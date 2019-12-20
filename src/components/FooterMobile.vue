@@ -60,7 +60,7 @@
                     <span>Главная</span>
                 </router-link>
             </li>
-            <li :class="{active: $route.name === 'Courses'}">
+            <li :class="{ active: $route.name === 'Courses' }">
                 <router-link :to="{ name: 'Courses' }">
                     <span class="icon catalog"></span>
                     <span>Курсы</span>

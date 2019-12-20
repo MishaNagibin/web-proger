@@ -10,8 +10,8 @@
                         <div class="player">
                             <iframe
                                 :src="video"
-                                frameborder="0"
                                 allowfullscreen
+                                frameborder="0"
                             ></iframe>
                         </div>
                         <div :class="['list', { 'list-resize': isPlayerResize }]">
@@ -57,8 +57,8 @@ export default Vue.extend({
         return {
             course: {} as Courses | undefined,
             isPlayerResize: false,
-            video: "" as string | undefined,
-            lessonActive: 1 as number | undefined
+            video: "",
+            lessonActive: 1
         };
     },
     watch: {
@@ -120,7 +120,7 @@ export default Vue.extend({
 <style lang="scss">
 @import "../../styles/colors";
 
-.v-course {
+.v-course {    
     & > section {
         max-width: 1600px;
         margin: 0 auto;
@@ -130,7 +130,7 @@ export default Vue.extend({
         & > .content {
             background-color: $gray-200;
             border-radius: 4px;
-            padding: 10px; 
+            padding: 10px;
             margin: 20px 0;
 
             & > .video {

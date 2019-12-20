@@ -290,7 +290,7 @@ export default Vue.extend({
             & > div {
                 display: flex;
                 flex-direction: column;
-                max-width: 350px;
+                max-width: 250px;
                 margin: 10px;
                 width: 100%;
                 max-height: unset;
@@ -313,41 +313,27 @@ export default Vue.extend({
                     & > a {
                         align-self: unset;
                     }
+
+                    & > span {
+                        padding: 0 10px;
+                    }
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 790px) {
-    .c-courses {
-        & > .courses {
-            & > div {
-                max-width: 200px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 710px) {
-    .c-courses {
-        & > .courses {
-            & > div {
-                max-width: 250px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 590px) {
-    .c-courses {
-        & > .courses {
-            justify-content: center;
-
-            & > div {
-                max-width: 350px;
-            }
-        }
-    }
-}
+// @media screen and (max-width: 590px) {
+//     .c-courses {
+//         & > .courses {
+//             overflow: hidden;
+//             position: relative;
+//             margin: 15px auto;
+//             width: 100%;
+//             max-width: 1600px;
+//             justify-content: unset;
+//             flex-flow: nowrap;
+//         }
+//     }
+// }
 </style>

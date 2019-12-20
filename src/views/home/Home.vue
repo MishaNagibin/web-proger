@@ -146,7 +146,7 @@ export default Vue.extend({
         & > .last-added-courses {
             display: flex;
             flex-direction: column;
-            max-width: 1200px;
+            max-width: 1600px;
             align-items: center;
 
             & > h2 {
@@ -191,6 +191,7 @@ export default Vue.extend({
                         margin-left: 20px;
                         justify-content: space-between;
                         min-height: 180px;
+                        width: 100%;
 
                         & > h3 {
                             margin: 0;
@@ -288,7 +289,7 @@ export default Vue.extend({
                     & > div {
                         display: flex;
                         flex-direction: column;
-                        max-width: 350px;
+                        max-width: 250px;
                         margin: 10px;
                         width: 100%;
                         max-height: unset;
@@ -311,6 +312,10 @@ export default Vue.extend({
                             & > a {
                                 align-self: unset;
                             }
+
+                            & > span {
+                                padding: 0 10px;
+                            }
                         }
                     }
                 }
@@ -318,61 +323,4 @@ export default Vue.extend({
         }
     }
 }
-
-@media screen and (max-width: 790px) {
-    .v-home {
-        & > .container {
-            & > .last-added-courses {
-                & > section {
-                    & > div {
-                        max-width: 200px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 710px) {
-    .v-home {
-        & > .container {
-            & > .last-added-courses {
-                & > section {
-                    & > div {
-                        max-width: 250px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 590px) {
-    .v-home {
-        & > .container {
-            & > .last-added-courses {
-                & > section {
-                    justify-content: center;
-
-                    & > div {
-                        max-width: 350px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-// @media screen and (max-width: 540px) {
-//     .v-home {
-//         & > .container {
-//             & > .popular-categories {
-//                 & > span {
-//                     flex-direction: column;
-//                     justify-content: center;
-//                 }
-//             }
-//         }
-//     }
-// }
 </style>
