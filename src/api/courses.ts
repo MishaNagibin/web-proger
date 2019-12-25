@@ -26,7 +26,197 @@ const courses = [
     },
     {
         ID: 2,
-        name: "React",
+        name: "React 1111 ",
+        description:
+            "React — JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов. React разрабатывается и поддерживается Facebook, Instagram и сообществом отдельных разработчиков и корпораций. React может использоваться для разработки одностраничных и мобильных приложений.",
+        image: "react.png",
+        slug: "react",
+        category: "Frontend",
+        lang: "React",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },
+    {
+        ID: 2,
+        name: "React 22222",
+        description:
+            "React — JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов. React разрабатывается и поддерживается Facebook, Instagram и сообществом отдельных разработчиков и корпораций. React может использоваться для разработки одностраничных и мобильных приложений.",
+        image: "react.png",
+        slug: "react",
+        category: "Frontend",
+        lang: "React",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },{
+        ID: 2,
+        name: "React 333333",
+        description:
+            "React — JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов. React разрабатывается и поддерживается Facebook, Instagram и сообществом отдельных разработчиков и корпораций. React может использоваться для разработки одностраничных и мобильных приложений.",
+        image: "react.png",
+        slug: "react",
+        category: "Frontend",
+        lang: "React",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },{
+        ID: 2,
+        name: "React 44444444",
+        description:
+            "React — JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов. React разрабатывается и поддерживается Facebook, Instagram и сообществом отдельных разработчиков и корпораций. React может использоваться для разработки одностраничных и мобильных приложений.",
+        image: "react.png",
+        slug: "react",
+        category: "Frontend",
+        lang: "React",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },{
+        ID: 2,
+        name: "React 5555555",
+        description:
+            "React — JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов. React разрабатывается и поддерживается Facebook, Instagram и сообществом отдельных разработчиков и корпораций. React может использоваться для разработки одностраничных и мобильных приложений.",
+        image: "react.png",
+        slug: "react",
+        category: "Frontend",
+        lang: "React",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },{
+        ID: 2,
+        name: "React 666666",
+        description:
+            "React — JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов. React разрабатывается и поддерживается Facebook, Instagram и сообществом отдельных разработчиков и корпораций. React может использоваться для разработки одностраничных и мобильных приложений.",
+        image: "react.png",
+        slug: "react",
+        category: "Frontend",
+        lang: "React",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },{
+        ID: 2,
+        name: "React 7777777",
+        description:
+            "React — JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов. React разрабатывается и поддерживается Facebook, Instagram и сообществом отдельных разработчиков и корпораций. React может использоваться для разработки одностраничных и мобильных приложений.",
+        image: "react.png",
+        slug: "react",
+        category: "Frontend",
+        lang: "React",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },{
+        ID: 2,
+        name: "React 8888888",
+        description:
+            "React — JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов. React разрабатывается и поддерживается Facebook, Instagram и сообществом отдельных разработчиков и корпораций. React может использоваться для разработки одностраничных и мобильных приложений.",
+        image: "react.png",
+        slug: "react",
+        category: "Frontend",
+        lang: "React",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },{
+        ID: 2,
+        name: "React 9999999",
+        description:
+            "React — JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов. React разрабатывается и поддерживается Facebook, Instagram и сообществом отдельных разработчиков и корпораций. React может использоваться для разработки одностраничных и мобильных приложений.",
+        image: "react.png",
+        slug: "react",
+        category: "Frontend",
+        lang: "React",
+        lessons: [
+            {
+                ID: 1,
+                name: "Что такое VueJS?",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+            },
+            {
+                ID: 2,
+                name: "Создание простого Vue приложения",
+                link: "//vk.com/video_ext.php?oid=-183174252&id=456239139&hash=8412f0aa2241568e&hd=2"
+            },
+        ],
+    },{
+        ID: 2,
+        name: "React 1000000",
         description:
             "React — JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов. React разрабатывается и поддерживается Facebook, Instagram и сообществом отдельных разработчиков и корпораций. React может использоваться для разработки одностраничных и мобильных приложений.",
         image: "react.png",

@@ -136,6 +136,7 @@ export default Vue.extend({
     z-index: 9999;
     background-color: $gray-200;
     border-top: 1px solid $gray-400;
+    margin-top: auto;
 
     & > .side-bar {
         position: fixed;
