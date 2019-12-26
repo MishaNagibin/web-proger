@@ -44,8 +44,8 @@
             <li>
                 <button @click="onButtonClick">
                     <span
-                        ref="burger"
                         :class="['burger', { opened: isOpened }]"
+                        ref="burger"
                     >
                         <span></span>
                         <span></span>

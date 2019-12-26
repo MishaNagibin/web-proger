@@ -1,4 +1,4 @@
 export interface Breadcrumbs {
-    name: string;
-    routeName?: string;
+    name: string
+    routeName?: string
 }

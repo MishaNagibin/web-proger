@@ -13,7 +13,7 @@ import Vue from "vue";
 import cTopNavigationBar from "@/components/TopNavigationBar.vue";
 import cHeader from "@/components/Header.vue";
 import cBreadcrumbs from "@/components/Breadcrumbs.vue";
-import cFooterMobile from "@/components/FooterMobile.vue"
+import cFooterMobile from "@/components/FooterMobile.vue";
 
 export default Vue.extend({
     name: "app",

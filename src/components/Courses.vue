@@ -114,8 +114,6 @@ export default Vue.extend({
                 end = start + this.itemsPerPage;
             }
 
-            console.log(start, end);
-
             if (this.categoryCourse !== undefined) {
                 this.resultCount = (this.listCourses as Courses[]).filter(
                     n => n.category === this.categoryCourse
