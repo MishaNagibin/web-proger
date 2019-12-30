@@ -1,26 +1,24 @@
 <template>
     <section
-        class="c-courses"
-        ref="courses"
+        class="c-technologies"
+        ref="technologies"
     >
         <section
-            class="courses"
-            ref="courses-cards"
+            class="technologies"
+            ref="technologies-cards"
         >
             <div
-                v-for="(course, index) of preparedCourses"
+                v-for="(technology, index) of preparedTechnologies"
                 :key="index"
                 :style="{ marginLeft: `${itemMargins}px`, marginRight: `${itemMargins}px` }"
             >
-                <router-link :to="{ name: 'Course', params: { courseID: course.ID, courseSlug: course.slug } }">
-                    <span>{{ course.category }}</span>
-                    <img :src="getImgUrl(course.image)" />
+                <router-link :to="{ name: 'Technology', params: { technologyID: technology.ID, technologySlug: technology.slug } }">
+                    <img :src="getImgUrl(technology.image)" />
                 </router-link>
                 <div class="info">
-                    <h3>{{ course.name }}</h3>
-                    <span>{{ course.description }}</span>
-                    <router-link :to="{ name: 'Course', params: { courseID: course.ID, courseSlug: course.slug } }">
-                        <button>Посмотреть</button>
+                    <span>{{ technology.description }}</span>
+                    <router-link :to="{ name: 'Technology', params: { technologyID: technology.ID, technologySlug: technology.slug } }">
+                        <button>Читать</button>
                     </router-link>
                 </div>
             </div>
@@ -37,7 +35,7 @@
             </span>
         </section>
         <section
-            v-if="listCourses.length > 10"
+            v-if="listTechnologies.length > 10"
             class="pagination"
         >
             <span
@@ -67,19 +65,15 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { Courses } from "@/modeles";
+import { Technologies } from "@/modeles";
 import { Prop } from "vue/types/options";
 
 export default Vue.extend({
-    name: "Courses",
+    name: "Technologies",
     props: {
-        listCourses: {
-            type: Array as Prop<Courses[]>,
+        listTechnologies: {
+            type: Array as Prop<Technologies[]>,
             required: true
-        },
-        langCourse: {
-            type: String,
-            default: undefined
         }
     },
     data() {
@@ -95,33 +89,22 @@ export default Vue.extend({
     },
     computed: {
         isVisible(): boolean {
-            return (this.listCourses || []).length > this.capacity;
+            return (this.listTechnologies || []).length > this.capacity;
         },
-        preparedCourses(): Courses[] {
+        preparedTechnologies(): Technologies[] {
             const screenWidth = window.screen.width;
             let start, end;
 
             if (screenWidth <= 590) {
                 start = this.itemIndex;
-                end = this.listCourses.length;
+                end = this.listTechnologies.length;
             } else {
                 start =
                     this.currentPage * this.itemsPerPage - this.itemsPerPage;
                 end = start + this.itemsPerPage;
             }
 
-            if (this.langCourse !== undefined) {
-                this.resultCount = (this.listCourses as Courses[]).filter(
-                    n => n.lang === this.langCourse
-                ).length;
-
-                return (this.listCourses as Courses[])
-                    .filter(n => n.lang === this.langCourse)
-                    .slice(start, end);
-            } else {
-                this.resultCount = this.listCourses.length;
-                return this.listCourses.slice(start, end);
-            }
+            return this.listTechnologies.slice(start, end);
         },
         totalPages(): number {
             return Math.ceil(this.resultCount / this.itemsPerPage);
@@ -135,7 +118,7 @@ export default Vue.extend({
         }
     },
     watch: {
-        listCourses(n: Courses[]) {
+        listTechnologies(n: Technologies[]) {
             if (n.length < 1) {
                 return;
             }
@@ -147,9 +130,9 @@ export default Vue.extend({
     },
     methods: {
         onResize() {
-            const courses = this.$refs["courses"];
-            const items = this.$refs["courses-cards"] as HTMLElement;
-            const clientWidth = (courses as HTMLElement).clientWidth;
+            const technologies = this.$refs["technologies"];
+            const items = this.$refs["technologies-cards"] as HTMLElement;
+            const clientWidth = (technologies as HTMLElement).clientWidth;
 
             this.$nextTick(() => {
                 const itemWidth = (
@@ -190,7 +173,7 @@ export default Vue.extend({
         onNextClick() {
             const screenWidth = window.screen.width;
             if (screenWidth <= 590) {
-                if (this.preparedCourses.length > 1) {
+                if (this.preparedTechnologies.length > 1) {
                     this.itemIndex++;
                 }
             } else {
@@ -205,7 +188,7 @@ export default Vue.extend({
 @import "../styles/colors";
 @import "../styles/icons";
 
-.c-courses {
+.c-technologies {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,13 +197,21 @@ export default Vue.extend({
         display: none;
     }
 
-    & > .courses {
+    & > .technologies {
+        display: flex;
+        width: 100%;
+        flex-flow: wrap;
+        justify-content: space-around;
+
         & > div {
-            margin: 20px 0;
-            background-color: $gray-200;
             display: flex;
+            flex-direction: column;
+            max-width: 250px;
+            margin: 10px;
             width: 100%;
-            max-height: 175px;
+            max-height: unset;
+            justify-content: space-between;
+            background-color: $gray-200;
 
             & > a {
                 text-decoration: none;
@@ -230,7 +221,6 @@ export default Vue.extend({
                 position: relative;
                 overflow: hidden;
                 max-width: 350px;
-                min-width: 350px;
                 width: 100%;
 
                 & > span {
@@ -240,6 +230,9 @@ export default Vue.extend({
                 }
 
                 & > img {
+                    max-width: 350px;
+                    width: 100%;
+
                     &:hover {
                         transition: 1s;
                         transform: scale(1.1);
@@ -250,10 +243,12 @@ export default Vue.extend({
             & > .info {
                 display: flex;
                 flex-direction: column;
-                margin-left: 20px;
                 width: 100%;
                 justify-content: space-between;
                 min-height: 180px;
+                margin-left: unset;
+                    align-items: center;
+                    text-align: center;
 
                 & > h3 {
                     margin: 0;
@@ -263,6 +258,7 @@ export default Vue.extend({
                     display: flex;
                     align-self: flex-end;
                     text-decoration: none;
+                    width: 100%;
 
                     & > button {
                         border: 1px solid $red-500;
@@ -270,11 +266,9 @@ export default Vue.extend({
                         user-select: none;
                         cursor: pointer;
                         background: $red-500;
-                        margin: 15px 10px 15px 0;
-                        border-radius: 4px;
-                        padding: 0 16px;
                         color: $gray-000;
                         height: 40px;
+                        width: 100%;
 
                         &:hover {
                             background: $red-400;
@@ -291,10 +285,10 @@ export default Vue.extend({
                 }
 
                 & > span {
-                    margin-bottom: 10px;
                     overflow: hidden;
-                    height: 75px;
-                    padding-right: 20px;
+                    height: 95px;
+                    padding: 0 10px;
+                    align-self: center;
                 }
             }
 
@@ -361,59 +355,8 @@ export default Vue.extend({
     }
 }
 
-@media screen and (max-width: 850px) {
-    .c-courses {
-        & > .courses {
-            display: flex;
-            width: 100%;
-            flex-flow: wrap;
-            justify-content: space-around;
-
-            & > div {
-                display: flex;
-                flex-direction: column;
-                max-width: 250px;
-                margin: 10px;
-                width: 100%;
-                max-height: unset;
-                justify-content: space-between;
-
-                & > a {
-                    min-width: unset;
-
-                    & > img {
-                        max-width: 350px;
-                        width: 100%;
-                    }
-                }
-
-                & > .info {
-                    margin-left: unset;
-                    align-items: center;
-                    text-align: center;
-
-                    & > a {
-                        align-self: unset;
-                        width: 100%;
-
-                        & > button {
-                            margin: 0;
-                            width: 100%;
-                            border-radius: 0;
-                        }
-                    }
-
-                    & > span {
-                        padding: 0 10px;
-                    }
-                }
-            }
-        }
-    }
-}
-
 @media screen and (max-width: 590px) {
-    .c-courses {
+    .c-technologies {
         overflow: hidden;
 
         & > .pagination {
@@ -448,7 +391,7 @@ export default Vue.extend({
             }
         }
 
-        & > .courses {
+        & > .technologies {
             position: relative;
             margin: 15px auto;
             width: unset;

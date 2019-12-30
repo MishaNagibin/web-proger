@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import vHome from '@/views/home/Home.vue'
 import vCourses from '@/views/courses/Courses.vue'
 import vCourse from '@/views/course/Course.vue';
+import vTechnologies from '@/views/technologies/Technologies.vue';
 
 Vue.use(Router)
 
@@ -23,6 +24,18 @@ export default new Router({
                 title: `${SITE_TITLE} | Главная`,
                 breadcrumbs: { name: 'Главная страница' }
             },
+        },
+        {
+            name: 'Technologies',
+            path: '/technologies',
+            component: vTechnologies,
+            meta: {
+                title: `${SITE_TITLE} | Технологии`,
+                breadcrumbs: [
+                    { name: 'Главная страница', routeName: 'Home' },
+                    { name: 'Технологии' }
+                ]
+            }
         },
         {
             name: 'Courses',
