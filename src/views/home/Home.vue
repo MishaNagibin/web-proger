@@ -35,13 +35,13 @@
                             <h3>{{ course.name }}</h3>
                             <span>{{ course.description }}</span>
                             <router-link :to="{ name: 'Course', params: { courseID: course.ID, courseSlug: course.slug } }">
-                                <button>Посмотреть</button>
+                                <cButton :buttonText="'Посмотреть'" />
                             </router-link>
                         </div>
                     </div>
                 </section>
                 <router-link :to="{ name: 'Courses' }">
-                    <button>Все курсы</button>
+                    <cButton :buttonText="'Посмотреть'" />
                 </router-link>
             </section>
         </section>
@@ -52,9 +52,11 @@
 import Vue from "vue";
 import { Courses } from "@/modeles";
 import api from "@/api";
+import cButton from "@/components/Button.vue";
 
 export default Vue.extend({
     name: "Home",
+    components: { cButton },
     data() {
         return {
             courses: [] as Courses[]
@@ -201,32 +203,6 @@ export default Vue.extend({
                             display: flex;
                             align-self: flex-end;
                             text-decoration: none;
-
-                            & > button {
-                                border: 1px solid $red-500;
-                                outline: none;
-                                user-select: none;
-                                cursor: pointer;
-                                background: $red-500;
-                                margin: 15px 10px 15px 0;
-                                border-radius: 4px;
-                                padding: 0 16px;
-                                color: $gray-000;
-                                height: 40px;
-
-                                &:hover {
-                                    background: $red-400;
-                                }
-
-                                &:active {
-                                    background: $red-600;
-                                }
-
-                                &:focus {
-                                    box-shadow: 0 0 0 2px
-                                        rgba(63, 81, 181, 0.15);
-                                }
-                            }
                         }
 
                         & > span {
@@ -245,32 +221,6 @@ export default Vue.extend({
             & > a {
                 display: flex;
                 text-decoration: none;
-
-                & > button {
-                    border: 1px solid $red-500;
-                    outline: none;
-                    user-select: none;
-                    cursor: pointer;
-                    background: $red-500;
-                    border-radius: 4px;
-                    padding: 0 16px;
-                    color: $gray-000;
-                    height: 40px;
-                    margin: 20px 0;
-                    width: 200px;
-
-                    &:hover {
-                        background: $red-400;
-                    }
-
-                    &:active {
-                        background: $red-600;
-                    }
-
-                    &:focus {
-                        box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.15);
-                    }
-                }
             }
         }
     }

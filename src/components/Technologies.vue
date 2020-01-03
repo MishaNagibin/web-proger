@@ -18,7 +18,7 @@
                 <div class="info">
                     <span>{{ technology.description }}</span>
                     <router-link :to="{ name: 'Technology', params: { technologyID: technology.ID, technologySlug: technology.slug } }">
-                        <button>Читать</button>
+                        <cButton :buttonText="'Читать'" />
                     </router-link>
                 </div>
             </div>
@@ -67,6 +67,7 @@
 import Vue from "vue";
 import { Technologies } from "@/modeles";
 import { Prop } from "vue/types/options";
+import cButton from "@/components/Button.vue";
 
 export default Vue.extend({
     name: "Technologies",
@@ -76,6 +77,7 @@ export default Vue.extend({
             required: true
         }
     },
+    components: { cButton },
     data() {
         return {
             currentPage: 1,
@@ -247,8 +249,8 @@ export default Vue.extend({
                 justify-content: space-between;
                 min-height: 180px;
                 margin-left: unset;
-                    align-items: center;
-                    text-align: center;
+                align-items: center;
+                text-align: center;
 
                 & > h3 {
                     margin: 0;
@@ -259,29 +261,6 @@ export default Vue.extend({
                     align-self: flex-end;
                     text-decoration: none;
                     width: 100%;
-
-                    & > button {
-                        border: 1px solid $red-500;
-                        outline: none;
-                        user-select: none;
-                        cursor: pointer;
-                        background: $red-500;
-                        color: $gray-000;
-                        height: 40px;
-                        width: 100%;
-
-                        &:hover {
-                            background: $red-400;
-                        }
-
-                        &:active {
-                            background: $red-600;
-                        }
-
-                        &:focus {
-                            box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.15);
-                        }
-                    }
                 }
 
                 & > span {

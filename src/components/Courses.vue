@@ -20,7 +20,7 @@
                     <h3>{{ course.name }}</h3>
                     <span>{{ course.description }}</span>
                     <router-link :to="{ name: 'Course', params: { courseID: course.ID, courseSlug: course.slug } }">
-                        <button>Посмотреть</button>
+                        <cButton :buttonText="'Посмотреть'" />
                     </router-link>
                 </div>
             </div>
@@ -69,6 +69,7 @@
 import Vue from "vue";
 import { Courses } from "@/modeles";
 import { Prop } from "vue/types/options";
+import cButton from "@/components/Button.vue";
 
 export default Vue.extend({
     name: "Courses",
@@ -82,6 +83,7 @@ export default Vue.extend({
             default: undefined
         }
     },
+    components: { cButton },
     data() {
         return {
             currentPage: 1,
@@ -263,31 +265,6 @@ export default Vue.extend({
                     display: flex;
                     align-self: flex-end;
                     text-decoration: none;
-
-                    & > button {
-                        border: 1px solid $red-500;
-                        outline: none;
-                        user-select: none;
-                        cursor: pointer;
-                        background: $red-500;
-                        margin: 15px 10px 15px 0;
-                        border-radius: 4px;
-                        padding: 0 16px;
-                        color: $gray-000;
-                        height: 40px;
-
-                        &:hover {
-                            background: $red-400;
-                        }
-
-                        &:active {
-                            background: $red-600;
-                        }
-
-                        &:focus {
-                            box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.15);
-                        }
-                    }
                 }
 
                 & > span {
@@ -396,10 +373,14 @@ export default Vue.extend({
                         align-self: unset;
                         width: 100%;
 
-                        & > button {
-                            margin: 0;
+                        & > .c-button {
                             width: 100%;
-                            border-radius: 0;
+
+                            & > button {
+                                margin: 0;
+                                width: 100%;
+                                border-radius: 0;
+                            }
                         }
                     }
 

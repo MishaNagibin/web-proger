@@ -27,7 +27,9 @@
                         </div>
                     </div>
                 </div>
-                <button @click="playerResize">Плеер на 100%</button>
+                <span @click="playerResize">
+                    <cButton :buttonText="'Плеер на 100%'" />
+                </span>
             </section>
         </section>
     </main>
@@ -38,6 +40,7 @@ import Vue from "vue";
 import { Courses } from "@/modeles";
 import { COURSES } from "@/store/actions";
 import api from "@/api";
+import cButton from "@/components/Button.vue";
 
 export default Vue.extend({
     name: "Course",
@@ -53,6 +56,7 @@ export default Vue.extend({
             default: undefined
         }
     },
+    components: { cButton },
     data() {
         return {
             course: {} as Courses | undefined,
@@ -120,7 +124,7 @@ export default Vue.extend({
 <style lang="scss">
 @import "../../styles/colors";
 
-.v-course {    
+.v-course {
     & > section {
         max-width: 1600px;
         margin: 0 auto;
@@ -215,31 +219,6 @@ export default Vue.extend({
                     }
                 }
             }
-
-            & > button {
-                border: 1px solid $red-500;
-                outline: none;
-                user-select: none;
-                cursor: pointer;
-                background: $red-500;
-                margin: 0 10px 10px 0;
-                border-radius: 4px;
-                padding: 0 16px;
-                color: $gray-000;
-                height: 40px;
-
-                &:hover {
-                    background: $red-400;
-                }
-
-                &:active {
-                    background: $red-600;
-                }
-
-                &:focus {
-                    box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.15);
-                }
-            }
         }
     }
 }
@@ -263,8 +242,10 @@ export default Vue.extend({
                     }
                 }
 
-                & > button {
-                    display: none;
+                & > span {
+                    & > .c-button {
+                        display: none;
+                    }
                 }
             }
         }
