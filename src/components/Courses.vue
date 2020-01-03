@@ -37,7 +37,7 @@
             </span>
         </section>
         <section
-            v-if="listCourses.length > 10"
+            v-if="listCourses.length > 10 && !isHome"
             class="pagination"
         >
             <span
@@ -81,6 +81,10 @@ export default Vue.extend({
         langCourse: {
             type: String,
             default: undefined
+        },
+        isHome: {
+            type: Boolean,
+            default: false
         }
     },
     components: { cButton },
@@ -88,7 +92,6 @@ export default Vue.extend({
         return {
             currentPage: 1,
             itemsPerPage: 10,
-            resultCount: 0,
             startPage: 1,
             capacity: 0,
             itemIndex: 0,
@@ -96,16 +99,28 @@ export default Vue.extend({
         };
     },
     computed: {
+        resultCount(): number {
+            if (this.langCourse !== undefined) {
+                return (this.listCourses as Courses[]).filter(
+                    n => n.lang === this.langCourse
+                ).length;
+            }
+
+            return this.listCourses.length;
+        },
         isVisible(): boolean {
             return (this.listCourses || []).length > this.capacity;
         },
         preparedCourses(): Courses[] {
             const screenWidth = window.screen.width;
             let start, end;
+            const lastCourses = this.listCourses.map(c => ({ ...c })).reverse();
 
             if (screenWidth <= 590) {
                 start = this.itemIndex;
-                end = this.listCourses.length;
+                end = this.isHome
+                    ? lastCourses.length
+                    : this.listCourses.length;
             } else {
                 start =
                     this.currentPage * this.itemsPerPage - this.itemsPerPage;
@@ -113,17 +128,14 @@ export default Vue.extend({
             }
 
             if (this.langCourse !== undefined) {
-                this.resultCount = (this.listCourses as Courses[]).filter(
-                    n => n.lang === this.langCourse
-                ).length;
-
                 return (this.listCourses as Courses[])
                     .filter(n => n.lang === this.langCourse)
                     .slice(start, end);
-            } else {
-                this.resultCount = this.listCourses.length;
-                return this.listCourses.slice(start, end);
             }
+
+            return this.isHome
+                ? lastCourses.slice(start, 5)
+                : this.listCourses.slice(start, end);
         },
         totalPages(): number {
             return Math.ceil(this.resultCount / this.itemsPerPage);

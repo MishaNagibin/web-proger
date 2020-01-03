@@ -65,8 +65,8 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { Technologies } from "@/modeles";
 import { Prop } from "vue/types/options";
+import { Technologies } from "@/modeles";
 import cButton from "@/components/Button.vue";
 
 export default Vue.extend({
@@ -82,7 +82,6 @@ export default Vue.extend({
         return {
             currentPage: 1,
             itemsPerPage: 10,
-            resultCount: 0,
             startPage: 1,
             capacity: 0,
             itemIndex: 0,
@@ -90,6 +89,9 @@ export default Vue.extend({
         };
     },
     computed: {
+        resultCount(): number {
+            return this.listTechnologies.length || 0;
+        },
         isVisible(): boolean {
             return (this.listTechnologies || []).length > this.capacity;
         },
@@ -261,6 +263,16 @@ export default Vue.extend({
                     align-self: flex-end;
                     text-decoration: none;
                     width: 100%;
+
+                    & > .c-button {
+                        width: 100%;
+
+                        & > button {
+                            margin: 0;
+                            border-radius: 0;
+                            width: 100%;
+                        }
+                    }
                 }
 
                 & > span {

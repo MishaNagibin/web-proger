@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import vHome from '@/views/home/Home.vue'
-import vCourses from '@/views/courses/Courses.vue'
 import vCourse from '@/views/course/Course.vue';
+import vCourses from '@/views/courses/Courses.vue'
+import vHome from '@/views/home/Home.vue'
 import vTechnologies from '@/views/technologies/Technologies.vue';
+import vTechnology from '@/views/technology/Technology.vue';
 
 Vue.use(Router)
 
@@ -245,6 +246,19 @@ export default new Router({
                 breadcrumbs: [
                     { name: 'Главная страница', routeName: 'Home' },
                     { name: 'Курсы', routeName: 'Courses' },
+                ]
+            }
+        },
+        {
+            name: 'Technology',
+            path: '/technology/:technologyID(\\d+)-:technologySlug',
+            component: vTechnology,
+            props: r => ({ ...r.params, technologyID: Number(r.params.technologyID) }),
+            meta: {
+                title: `${SITE_TITLE} | Технология`,
+                breadcrumbs: [
+                    { name: 'Главная страница', routeName: 'Home' },
+                    { name: 'Технологии', routeName: 'Technologies' },
                 ]
             }
         },

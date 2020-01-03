@@ -74,6 +74,150 @@ const technologies = [
         slug: "javascript",
         category: "Frontend",
     },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
+    {
+        ID: 3,
+        name: "JavaScript",
+        description:
+            "Какой то текст про JavaScript",
+        image: "javascript.jpg",
+        slug: "javascript",
+        category: "Frontend",
+    },
 ] as Technologies[]
 
 function get(technology?: Technologies) {

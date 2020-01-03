@@ -22,26 +22,12 @@
             </div>
             <section class="last-added-courses">
                 <h2>Последние добавленные курсы</h2>
-                <section>
-                    <div
-                        v-for="(course, index) of preparedCourses"
-                        :key="index"
-                    >
-                        <router-link :to="{ name: 'Course', params: { courseID: course.ID, courseSlug: course.slug } }">
-                            <span>{{ course.category }}</span>
-                            <img :src="getImgUrl(course.image)" />
-                        </router-link>
-                        <div class="info">
-                            <h3>{{ course.name }}</h3>
-                            <span>{{ course.description }}</span>
-                            <router-link :to="{ name: 'Course', params: { courseID: course.ID, courseSlug: course.slug } }">
-                                <cButton :buttonText="'Посмотреть'" />
-                            </router-link>
-                        </div>
-                    </div>
-                </section>
+                <cCourses
+                    :listCourses="courses"
+                    :isHome="true"
+                />
                 <router-link :to="{ name: 'Courses' }">
-                    <cButton :buttonText="'Посмотреть'" />
+                    <cButton :buttonText="'Все курсы'" />
                 </router-link>
             </section>
         </section>
@@ -53,10 +39,11 @@ import Vue from "vue";
 import { Courses } from "@/modeles";
 import api from "@/api";
 import cButton from "@/components/Button.vue";
+import cCourses from "@/components/Courses.vue";
 
 export default Vue.extend({
     name: "Home",
-    components: { cButton },
+    components: { cButton, cCourses },
     data() {
         return {
             courses: [] as Courses[]
@@ -73,7 +60,7 @@ export default Vue.extend({
         }
     },
     computed: {
-        preparedCourses(): Object {
+        preparedCourses(): Courses[] {
             return this.courses.slice(0, 5);
         }
     }
@@ -155,69 +142,6 @@ export default Vue.extend({
                 text-align: center;
             }
 
-            & > section {
-                & > div {
-                    margin: 20px 0;
-                    background-color: $gray-200;
-                    display: flex;
-                    max-height: 175px;
-
-                    & > a {
-                        text-decoration: none;
-                        display: flex;
-                        align-self: center;
-                        color: $gray-000;
-                        position: relative;
-                        overflow: hidden;
-                        max-width: 350px;
-                        min-width: 350px;
-                        width: 100%;
-
-                        & > span {
-                            position: absolute;
-                            background-color: $red-500;
-                            padding: 5px;
-                        }
-
-                        & > img {
-                            &:hover {
-                                transition: 1s;
-                                transform: scale(1.1);
-                            }
-                        }
-                    }
-
-                    & > .info {
-                        display: flex;
-                        flex-direction: column;
-                        margin-left: 20px;
-                        justify-content: space-between;
-                        min-height: 180px;
-                        width: 100%;
-
-                        & > h3 {
-                            margin: 0;
-                        }
-
-                        & > a {
-                            display: flex;
-                            align-self: flex-end;
-                            text-decoration: none;
-                        }
-
-                        & > span {
-                            margin-bottom: 10px;
-                            height: 75px;
-                            overflow: hidden;
-                        }
-                    }
-
-                    &:hover {
-                        box-shadow: 0 0 10px 3px $gray-500;
-                    }
-                }
-            }
-
             & > a {
                 display: flex;
                 text-decoration: none;
@@ -226,49 +150,12 @@ export default Vue.extend({
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 590px) {
     .v-home {
-        & > .container {
-            & > .last-added-courses {
-                & > section {
-                    display: flex;
-                    width: 100%;
-                    flex-flow: wrap;
-                    justify-content: space-around;
-
-                    & > div {
-                        display: flex;
-                        flex-direction: column;
-                        max-width: 250px;
-                        margin: 10px;
-                        width: 100%;
-                        max-height: unset;
-                        justify-content: space-between;
-
-                        & > a {
-                            min-width: unset;
-
-                            & > img {
-                                max-width: 350px;
-                                width: 100%;
-                            }
-                        }
-
-                        & > .info {
-                            margin-left: unset;
-                            align-items: center;
-                            text-align: center;
-
-                            & > a {
-                                align-self: unset;
-                            }
-
-                            & > span {
-                                padding: 0 10px;
-                            }
-                        }
-                    }
-                }
+        .container {
+            .last-added-courses {
+                width: 100%;
+                display: block;
             }
         }
     }
