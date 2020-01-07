@@ -94,7 +94,6 @@ export default Vue.extend({
         updatedBreadcrumbs() {
             
             if (this.course) {
-                console.log(this.course.category,'as');
                 this.$set(this.$route.meta.breadcrumbs, 2, {
                     name: this.course.category,
                     routeName: 'Courses',
