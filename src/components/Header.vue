@@ -60,7 +60,7 @@ header {
             text-decoration: none;
             font-size: 30px;
             font-style: italic;
-            margin-right: 20px;
+            margin: 0 20px;
 
             & > section {
                 display: flex;
@@ -91,7 +91,7 @@ header {
             padding: 0 10px;
 
             & > a {
-                margin-right: 10px;
+                margin: 0 10px;
                 font-size: 16px;
                 text-align: center;
 

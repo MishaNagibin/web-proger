@@ -21,7 +21,7 @@
             <router-link
                 v-for="(category, index) of categories"
                 :key="index"
-                :to="category.langSlug ? { name: 'Courses', params: { categorySlug: category.categorySlug, langSlug: category.langSlug } }: { name: 'Courses', params: { categorySlug: category.categorySlug } } "
+                :to="category.langSlug ? { name: 'Courses', params: { categorySlug: category.categorySlug, langSlug: category.langSlug } } : category.categorySlug !== 'Courses' ? { name: 'Courses', params: { categorySlug: category.categorySlug } } : ''"
                 :class="{ active: $route.params.langSlug ? category.langSlug === $route.params.langSlug : category.name === 'Все' }"
             >{{ category.name }}</router-link>
         </section>
@@ -45,10 +45,10 @@
                 <div
                     v-for="(category, index) of categories"
                     :key="index"
-                    :class="['category', { active: categorySelected === category.name || ($route.params.slug && $route.params.slug === category.slug) }]"
+                    :class="['category', { active: $route.params.langSlug ? category.langSlug === $route.params.langSlug : category.name === 'Все' }]"
                 >
                     <router-link
-                        :to="category.route ? { name: category.route } : { name: categoryName || category.route, params: { slug: category.slug || categoryName } } "
+                        :to="category.langSlug ? { name: 'Courses', params: { categorySlug: category.categorySlug, langSlug: category.langSlug } } : category.categorySlug !== 'Courses' ? { name: 'Courses', params: { categorySlug: category.categorySlug } } : ''"
                     >{{ category.name }}</router-link>
                 </div>
             </div>
@@ -77,14 +77,21 @@ export default Vue.extend({
     computed: {
         categorySelected(): string {
             let result = "Все";
-            this.categories.forEach(c => {
+            for (const c of this.categories) {
                 if (
-                    Object.keys(this.$route.params).length > 0 &&
+                    this.$route.params.langSlug !== undefined &&
                     this.$route.params.langSlug === c.langSlug
                 ) {
-                    result = c.name;
+                    return c.name;
+                } else if (
+                    this.$route.params.categorySlug !== undefined &&
+                    c.categorySlug !== undefined
+                ) {
+                    result =
+                        c.categorySlug[0].toUpperCase() +
+                        c.categorySlug.slice(1);
                 }
-            });
+            }
 
             return result;
         },
@@ -101,13 +108,23 @@ export default Vue.extend({
     },
     watch: {
         $route() {
-            this.$store.dispatch(CATEGORIES.GET, this.$route.params.categorySlug ? this.$route.params.categorySlug : this.$route.name);
+            this.$store.dispatch(
+                CATEGORIES.GET,
+                this.$route.params.categorySlug
+                    ? this.$route.params.categorySlug
+                    : this.$route.name
+            );
             this.isMenuActive = false;
         }
     },
     created() {
         if (this.$store.state.categories.categories === undefined) {
-            this.$store.dispatch(CATEGORIES.GET, this.$route.params.categorySlug ? this.$route.params.categorySlug : this.$route.name);
+            this.$store.dispatch(
+                CATEGORIES.GET,
+                this.$route.params.categorySlug
+                    ? this.$route.params.categorySlug
+                    : this.$route.name
+            );
         }
     },
     methods: {
@@ -200,7 +217,7 @@ export default Vue.extend({
         z-index: 998;
         position: fixed;
         align-self: center;
-        top: 10%;
+        top: 80px;
         border-radius: 4px;
         background-color: $gray-000;
         overflow: auto;
