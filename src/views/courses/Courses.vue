@@ -9,8 +9,8 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { Categories, Courses } from "@/modeles";
 import { COURSES, CATEGORIES } from "@/store/actions";
+import { Courses, Subcategories } from "@/modeles";
 import api from "@/api";
 import cCategories from "@/components/Categories.vue";
 import cCourses from "@/components/Courses.vue";
@@ -18,6 +18,11 @@ import cCourses from "@/components/Courses.vue";
 export default Vue.extend({
     name: "Courses",
     components: { cCategories, cCourses },
+    data() {
+        return {
+            categories: [] as Subcategories[]
+        };
+    },
     computed: {
         courses(): Courses[] {
             return this.$store.state.courses.courses || [];
@@ -45,18 +50,24 @@ export default Vue.extend({
         if (this.$store.state.courses.courses === undefined) {
             this.$store.dispatch(COURSES.GET);
         }
+        api.categories.get("Courses").then(c => {
+            this.categories = c;
+        });
+
         this.updatedBreadcrumbs();
     },
     methods: {
         updatedBreadcrumbs() {
+            const category =
+                this.categories.find(
+                    c => c.categorySlug === this.$route.params.categorySlug
+                ) || ({} as Subcategories);
             if (
                 this.$route.params.langSlug &&
                 this.preparedCourses.length > 0
             ) {
                 this.$set(this.$route.meta.breadcrumbs, 2, {
-                    name:
-                        this.$route.params.categorySlug[0].toUpperCase() +
-                        this.$route.params.categorySlug.slice(1),
+                    name: category.name,
                     routeName: this.$route.name,
                     params: this.$route.params.categorySlug
                 });
@@ -70,9 +81,7 @@ export default Vue.extend({
                 });
                 if (this.$route.params.categorySlug) {
                     this.$set(this.$route.meta.breadcrumbs, 2, {
-                        name:
-                            this.$route.params.categorySlug[0].toUpperCase() +
-                            this.$route.params.categorySlug.slice(1)
+                        name: category.name
                     });
                 }
 
