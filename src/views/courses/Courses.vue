@@ -24,11 +24,12 @@ export default Vue.extend({
         },
         preparedCourses(): Courses[] {
             return this.courses.filter(c =>
-                this.$route.params.slug
-                    ? c.lang.toLowerCase() === this.$route.params.slug
-                    : this.$route.name === "Courses"
-                    ? c
-                    : c.category === this.$route.name
+                this.$route.params.langSlug
+                    ? c.lang.toLowerCase() === this.$route.params.langSlug
+                    : this.$route.params.categorySlug
+                    ? c.category.toLowerCase() ===
+                      this.$route.params.categorySlug
+                    : c
             );
         }
     },
@@ -48,18 +49,32 @@ export default Vue.extend({
     },
     methods: {
         updatedBreadcrumbs() {
-            if (this.$route.params.slug && this.preparedCourses.length > 0) {
+            if (
+                this.$route.params.langSlug &&
+                this.preparedCourses.length > 0
+            ) {
                 this.$set(this.$route.meta.breadcrumbs, 2, {
-                    name: this.$route.name,
-                    routeName: this.$route.name
+                    name:
+                        this.$route.params.categorySlug[0].toUpperCase() +
+                        this.$route.params.categorySlug.slice(1),
+                    routeName: this.$route.name,
+                    params: this.$route.params.categorySlug
                 });
                 this.$set(this.$route.meta.breadcrumbs, 3, {
                     name: this.preparedCourses[0].lang
                 });
             } else {
-                this.$set(this.$route.meta.breadcrumbs, 2, {
-                    name: this.$route.name
+                this.$set(this.$route.meta.breadcrumbs, 1, {
+                    name: "Курсы",
+                    routeName: this.$route.name
                 });
+                if (this.$route.params.categorySlug) {
+                    this.$set(this.$route.meta.breadcrumbs, 2, {
+                        name:
+                            this.$route.params.categorySlug[0].toUpperCase() +
+                            this.$route.params.categorySlug.slice(1)
+                    });
+                }
 
                 if (this.$route.meta.breadcrumbs.length > 3) {
                     this.$route.meta.breadcrumbs.pop();
@@ -67,7 +82,16 @@ export default Vue.extend({
             }
 
             if (
-                this.$route.name === "Courses" &&
+                !this.$route.params.langSlug &&
+                !this.$route.params.categorySlug
+            ) {
+                this.$set(this.$route.meta.breadcrumbs, 1, {
+                    name: "Курсы"
+                });
+            }
+
+            if (
+                Object.keys(this.$route.params).length === 0 &&
                 this.$route.meta.breadcrumbs.length > 2
             ) {
                 this.$route.meta.breadcrumbs.pop();

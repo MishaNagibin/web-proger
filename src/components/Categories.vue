@@ -21,8 +21,8 @@
             <router-link
                 v-for="(category, index) of categories"
                 :key="index"
-                :to="category.route ? { name: category.route } : { name: categoryName || category.route, params: { slug: category.slug || categoryName } } "
-                :class="{ active: $route.params.slug ? category.slug === $route.params.slug : $route.name === category.route }"
+                :to="category.langSlug ? { name: 'Courses', params: { categorySlug: category.categorySlug, langSlug: category.langSlug } }: { name: 'Courses', params: { categorySlug: category.categorySlug } } "
+                :class="{ active: $route.params.langSlug ? category.langSlug === $route.params.langSlug : category.name === 'Все' }"
             >{{ category.name }}</router-link>
         </section>
         <div :class="['mobile-menu', { 'full-height': isMenuActive }]">
@@ -80,7 +80,7 @@ export default Vue.extend({
             this.categories.forEach(c => {
                 if (
                     Object.keys(this.$route.params).length > 0 &&
-                    this.$route.params.slug === c.slug
+                    this.$route.params.langSlug === c.langSlug
                 ) {
                     result = c.name;
                 }
@@ -94,20 +94,20 @@ export default Vue.extend({
         categoryDescription(): Subcategories[] {
             return (
                 this.categories.filter(
-                    c => c.slug === this.$route.params.slug
+                    c => c.langSlug === this.$route.params.langSlug
                 ) || this.categories[0]
             );
         }
     },
     watch: {
         $route() {
-            this.$store.dispatch(CATEGORIES.GET, this.$route.name);
+            this.$store.dispatch(CATEGORIES.GET, this.$route.params.categorySlug ? this.$route.params.categorySlug : this.$route.name);
             this.isMenuActive = false;
         }
     },
     created() {
         if (this.$store.state.categories.categories === undefined) {
-            this.$store.dispatch(CATEGORIES.GET, this.$route.name);
+            this.$store.dispatch(CATEGORIES.GET, this.$route.params.categorySlug ? this.$route.params.categorySlug : this.$route.name);
         }
     },
     methods: {

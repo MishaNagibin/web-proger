@@ -6,6 +6,6 @@ export interface Subcategories {
     ID: number
     name: string
     description: string
-    route?: string
-    slug?: string
+    categorySlug?: string
+    langSlug?: string
 }

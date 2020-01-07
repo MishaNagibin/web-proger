@@ -40,9 +40,19 @@ export default Vue.extend({
     methods: {
         routeTo(pRouteTo: number) {
             if (this.breadcrumbs[pRouteTo].routeName) {
-                this.$router.push({
-                    name: this.breadcrumbs[pRouteTo].routeName
-                });
+                if (this.breadcrumbs[pRouteTo].params !== undefined) {
+                    this.$router.push({
+                        name: this.breadcrumbs[pRouteTo].routeName,
+                        params: {
+                            categorySlug: this.breadcrumbs[pRouteTo]
+                                .params as string
+                        }
+                    });
+                } else {
+                    this.$router.push({
+                        name: this.breadcrumbs[pRouteTo].routeName
+                    });
+                }
             }
         }
     }
