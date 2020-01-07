@@ -37,19 +37,20 @@
                 v-show="isMenuActive"
                 class="controls menu-drop-down"
             >
-                <div
+                <span
                     class="icon close"
                     @click="onCloseMenuClick"
-                ></div>
-
-                <div
-                    v-for="(category, index) of categories"
-                    :key="index"
-                    :class="['category', { active: $route.params.langSlug ? category.langSlug === $route.params.langSlug : category.name === 'Все' }]"
-                >
-                    <router-link
-                        :to="category.langSlug ? { name: 'Courses', params: { categorySlug: category.categorySlug, langSlug: category.langSlug } } : category.categorySlug !== 'Courses' ? { name: 'Courses', params: { categorySlug: category.categorySlug } } : ''"
-                    >{{ category.name }}</router-link>
+                ></span>
+                <div>
+                    <div
+                        v-for="(category, index) of categories"
+                        :key="index"
+                        :class="['category', { active: $route.params.langSlug ? category.langSlug === $route.params.langSlug : category.name === 'Все' }]"
+                    >
+                        <router-link
+                            :to="category.langSlug ? { name: 'Courses', params: { categorySlug: category.categorySlug, langSlug: category.langSlug } } : category.categorySlug !== 'Courses' ? { name: 'Courses', params: { categorySlug: category.categorySlug } } : ''"
+                        >{{ category.name }}</router-link>
+                    </div>
                 </div>
             </div>
         </div>
@@ -213,11 +214,11 @@ export default Vue.extend({
     }
 
     & > .full-height {
-        height: 80%;
         z-index: 998;
         position: fixed;
         align-self: center;
-        top: 80px;
+        top: 0;
+        left: 0;
         border-radius: 4px;
         background-color: $gray-000;
         overflow: auto;
@@ -225,7 +226,8 @@ export default Vue.extend({
     }
 
     & > .mobile-menu {
-        width: 90%;
+        width: 100%;
+        height: 100%;
         display: none;
 
         & > .hide {
@@ -254,47 +256,57 @@ export default Vue.extend({
 
         & > .menu-drop-down {
             display: flex;
-            flex-direction: column;
-            font-size: 16px;
-            user-select: none;
-            align-items: center;
+            padding: 80px 20px;
+            flex-direction: row-reverse;
 
             & > .close {
-                align-self: flex-end;
                 margin: 10px 10px 0 0;
-            }
-
-            & .active {
-                color: $primary-300;
-                padding: 5px 15px;
-            }
-
-            & > .category {
                 display: flex;
-                width: 90%;
-                padding: 10px;
-                border-bottom: 1px solid $gray-500;
+                mask-repeat: no-repeat;
+                align-self: start;
+            }
 
-                & > a {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
+            & > div {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                & > .category {
+                    background-color: $gray-300;
+                    width: 140px;
+                    height: 20px;
+                    text-align: center;
+                    border-radius: 4px;
+                    padding: 20px;
                     text-decoration: none;
                     color: $gray-900;
+                    align-self: center;
+                    margin: 0 20px 20px 20px;
+                    display: flex;
+                    align-items: center;
+
+                    & > a {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        text-decoration: none;
+                        color: $gray-900;
+                    }
                 }
-            }
 
-            & > .active {
-                background-color: $red-300;
-                border-color: $red-300;
+                & > .active {
+                    background-color: $red-300;
+                    border-color: $red-300;
 
-                & > a {
-                    color: $gray-000;
+                    & > a {
+                        color: $gray-000;
+                    }
                 }
-            }
 
-            & > :last-child {
-                border: none;
+                & > :last-child {
+                    border: none;
+                }
             }
         }
     }
@@ -310,6 +322,22 @@ export default Vue.extend({
 
         & > .filter {
             display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 740px) {
+    .c-categories {
+        & > .mobile-menu {
+            & > .menu-drop-down {
+                & > div {
+                    & > .category {
+                        width: 120px;
+                        margin: 0 0 20px 20px;
+                    }
+                }
+            }
         }
     }
 }
