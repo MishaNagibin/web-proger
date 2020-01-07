@@ -25,6 +25,7 @@
                 :class="{ active: $route.params.langSlug ? category.langSlug === $route.params.langSlug : category.name === 'Все' }"
             >{{ category.name }}</router-link>
         </section>
+
         <div :class="['mobile-menu', { 'full-height': isMenuActive }]">
             <div
                 :class="[{ 'show-select-item': !isMenuActive, hide: isMenuActive }]"
@@ -33,26 +34,28 @@
                 {{ categorySelected }}
                 <span :class="['icon', { 'arrow-down': !isMenuActive }]"></span>
             </div>
-            <div
-                v-show="isMenuActive"
-                class="controls menu-drop-down"
-            >
-                <span
-                    class="icon close"
-                    @click="onCloseMenuClick"
-                ></span>
-                <div>
-                    <div
-                        v-for="(category, index) of categories"
-                        :key="index"
-                        :class="['category', { active: $route.params.langSlug ? category.langSlug === $route.params.langSlug : category.name === 'Все' }]"
-                    >
-                        <router-link
-                            :to="category.langSlug ? { name: 'Courses', params: { categorySlug: category.categorySlug, langSlug: category.langSlug } } : category.categorySlug !== 'Courses' ? { name: 'Courses', params: { categorySlug: category.categorySlug } } : ''"
-                        >{{ category.name }}</router-link>
+            <transition name="slide-fade">
+                <div
+                    v-if="isMenuActive"
+                    class="controls menu-drop-down"
+                >
+                    <span
+                        class="icon close"
+                        @click="onCloseMenuClick"
+                    ></span>
+                    <div>
+                        <div
+                            v-for="(category, index) of categories"
+                            :key="index"
+                            :class="['category', { active: $route.params.langSlug ? category.langSlug === $route.params.langSlug : category.name === 'Все' }]"
+                        >
+                            <router-link
+                                :to="category.langSlug ? { name: 'Courses', params: { categorySlug: category.categorySlug, langSlug: category.langSlug } } : category.categorySlug !== 'Courses' ? { name: 'Courses', params: { categorySlug: category.categorySlug } } : ''"
+                            >{{ category.name }}</router-link>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </transition>
         </div>
     </section>
 </template>
@@ -252,6 +255,20 @@ export default Vue.extend({
                 background-color: $gray-500;
                 mask-repeat: no-repeat;
             }
+        }
+
+        & > .slide-fade-enter-active {
+            transition: all 0.3s ease;
+        }
+
+        & > .slide-fade-leave-active {
+            transition: all 0.8s ease;
+        }
+
+        & > .slide-fade-enter,
+        & > .slide-fade-leave-to {
+            transform: translateX(-100px);
+            opacity: 0;
         }
 
         & > .menu-drop-down {
