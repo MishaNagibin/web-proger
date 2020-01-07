@@ -1,6 +1,6 @@
 <template>
     <section class="c-search">
-        <input placeholder="Введите название курса" />
+        <input placeholder="Поиск..." />
         <button>Найти</button>
     </section>
 </template>

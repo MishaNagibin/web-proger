@@ -3,17 +3,11 @@
         <section class="container">
             <router-link :to="{ name: 'Home' }">
                 <section @click="scrollToTop()">
-                    <span>WP</span>
+                    <span>Web proger</span>
                     <span>Web-Proger</span>
                 </section>
             </router-link>
             <cSearch></cSearch>
-            <section class="login">
-                <router-link :to="{ name: 'Login' }">
-                    <span class="icon user"></span>
-                    <span>Войти в аккаунт</span>
-                </router-link>
-            </section>
         </section>
     </header>
 </template>
@@ -64,10 +58,8 @@ header {
         & > a {
             color: $red-500;
             text-decoration: none;
-            font-weight: 900;
             font-size: 30px;
             font-style: italic;
-            white-space: nowrap;
             margin-right: 20px;
 
             & > section {
@@ -76,12 +68,12 @@ header {
 
                 & > :first-child {
                     font-style: italic;
-                    width: 60px;
-                    height: 60px;
+                    width: 65px;
+                    height: 65px;
                     background-color: $red-500;
                     color: $gray-000;
                     border-radius: 50%;
-                    display: flex;
+                    display: none;
                     align-items: center;
                 }
             }
@@ -89,41 +81,6 @@ header {
 
         & > .c-search {
             flex-grow: 1;
-        }
-
-        & > .login {
-            & > a {
-                display: flex;
-                align-items: center;
-                text-decoration: none;
-                color: $gray-800;
-
-                &:hover {
-                    & > .icon {
-                        background-color: $red-500;
-                    }
-                }
-
-                & > .icon {
-                    width: 30px;
-                    height: 30px;
-                    mask-repeat: no-repeat;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    header {
-        & > .container {
-            & > .login {
-                & > a {
-                    & > :last-child {
-                        display: none;
-                    }
-                }
-            }
         }
     }
 }
@@ -135,8 +92,14 @@ header {
 
             & > a {
                 margin-right: 10px;
+                font-size: 16px;
+                text-align: center;
 
                 & > section {
+                    & > :first-child {
+                        display: flex;
+                    }
+
                     & > :last-child {
                         display: none;
                     }
@@ -147,10 +110,6 @@ header {
                 & > button {
                     margin-right: unset;
                 }
-            }
-
-            & > .login {
-                display: none;
             }
         }
     }

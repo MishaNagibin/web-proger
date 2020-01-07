@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <span @click="playerResize">
-                    <cButton :buttonText="'Плеер на 100%'" />
+                    <cButton :buttonText=" isPlayerResize ? 'Плеер не на всю ширину' : 'Плеер на всю ширину'" />
                 </span>
             </section>
         </section>
@@ -218,6 +218,11 @@ export default Vue.extend({
                         align-self: center;
                     }
                 }
+            }
+
+            & > span {
+                display: flex;
+                width: fit-content;
             }
         }
     }

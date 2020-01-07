@@ -150,6 +150,24 @@ export default Vue.extend({
     }
 }
 
+@media screen and (max-width: 850px) {
+    .v-home {
+        .container {
+            .last-added-courses {
+                & > a {
+                    justify-content: center;
+
+                    & > .c-button {
+                        & > button {
+                            margin: 15px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 590px) {
     .v-home {
         .container {

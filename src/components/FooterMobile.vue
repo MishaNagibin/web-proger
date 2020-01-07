@@ -6,7 +6,7 @@
                 @click="onOverlayClick"
             ></section>
             <section class="navigation">
-                <section class="profile">
+                <!-- <section class="profile">
                     <section class="avatar">
                         <span class="icon user"></span>
                     </section>
@@ -15,15 +15,15 @@
                         <section class="phone">+7 (902) 756-09-57</section>
                     </section>
                     <section class="icon logout"></section>
-                </section>
-                <ul>
+                </section> -->
+                <!-- <ul>
                     <li>
                         <router-link :to="{ name: 'Home' }">Личные данные</router-link>
                     </li>
                     <li>
                         <router-link :to="{ name: 'Home' }">Настройки</router-link>
                     </li>
-                </ul>
+                </ul> -->
                 <ul>
                     <li>
                         <router-link :to="{ name: 'WorldSkillsRussia' }">WorldSkills Russia</router-link>
