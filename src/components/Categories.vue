@@ -326,7 +326,6 @@ export default Vue.extend({
     }
 }
 
-
 @media screen and (max-width: 740px) {
     .c-categories {
         & > .mobile-menu {

@@ -92,11 +92,10 @@ export default Vue.extend({
     },
     methods: {
         updatedBreadcrumbs() {
-            
             if (this.course) {
                 this.$set(this.$route.meta.breadcrumbs, 2, {
                     name: this.course.category,
-                    routeName: 'Courses',
+                    routeName: "Courses",
                     params: this.course.category.toLowerCase()
                 });
                 this.$set(this.$route.meta.breadcrumbs, 3, {
