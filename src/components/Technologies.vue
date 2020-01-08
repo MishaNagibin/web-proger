@@ -280,6 +280,9 @@ export default Vue.extend({
                     height: 95px;
                     padding: 0 10px;
                     align-self: center;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 4;
+                    display: -webkit-box;
                 }
             }
 

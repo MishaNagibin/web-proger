@@ -47,14 +47,11 @@
                 <span class="icon arrow-back"></span>
             </span>
             <span
-                v-if="currentPage > 1"
-                @click="setPage(startPage)"
-            >{{ startPage }}</span>
-            <span class="active">{{ currentPage }}</span>
-            <span
-                v-if="currentPage < totalPages "
-                @click="setPage(totalPages)"
-            >{{ totalPages }}</span>
+                v-for="(page, index) of pages"
+                :key="index"
+                :class="{active: page === currentPage}"
+                @click="setPage(page)"
+            >{{ page }}</span>
             <span
                 v-show="currentPage < totalPages"
                 @click="onNextClick"
@@ -139,6 +136,16 @@ export default Vue.extend({
         },
         totalPages(): number {
             return Math.ceil(this.resultCount / this.itemsPerPage);
+        },
+        pages(): number[] {
+            const start = this.currentPage > 2 ? this.currentPage - 3 : 0;
+            const end = this.currentPage > 2 ? this.currentPage + 2 : 5;
+            const pages = [];
+            for (let i = 1; i <= this.totalPages; i++) {
+                pages.push(i);
+            }
+
+            return pages.slice(start, end);
         }
     },
     mounted() {
@@ -284,6 +291,9 @@ export default Vue.extend({
                     overflow: hidden;
                     height: 75px;
                     padding-right: 20px;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    display: -webkit-box;
                 }
             }
 
