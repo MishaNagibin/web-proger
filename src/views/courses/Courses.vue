@@ -1,7 +1,7 @@
 <template>
     <main class="v-courses">
         <section class="container">
-            <cCategories :categoryName="$route.name" />
+            <cCategories />
             <cCourses :listCourses="preparedCourses" />
         </section>
     </main>
@@ -50,13 +50,18 @@ export default Vue.extend({
         if (this.$store.state.courses.courses === undefined) {
             this.$store.dispatch(COURSES.GET);
         }
-        api.categories.get("Courses").then(c => {
-            this.categories = c;
-        });
-
         this.updatedBreadcrumbs();
     },
+    beforeRouteEnter(to, from, next) {
+        next((vm: any) => vm.getCategories());
+    },
     methods: {
+        getCategories() {
+            api.categories.get("Courses").then(c => {
+                this.categories = c;
+                this.updatedBreadcrumbs();
+            });
+        },
         updatedBreadcrumbs() {
             const category =
                 this.categories.find(

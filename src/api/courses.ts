@@ -15,7 +15,7 @@ const courses = [
             {
                 ID: 1,
                 name: "Что такое VueJS?",
-                link: "//vk.com/video_ext.php?oid=-183174252&id=456239138&hash=6077d03299e96892&hd=2"
+                link: "https://www.youtube.com/embed/MOZNmSNtOJA"
             },
             {
                 ID: 2,

@@ -68,11 +68,6 @@ import api from "@/api";
 
 export default Vue.extend({
     name: "Categories",
-    props: {
-        categoryName: {
-            type: String
-        }
-    },
     data() {
         return {
             isMenuActive: false
@@ -122,14 +117,12 @@ export default Vue.extend({
         }
     },
     created() {
-        if (this.$store.state.categories.categories === undefined) {
-            this.$store.dispatch(
-                CATEGORIES.GET,
-                this.$route.params.categorySlug
-                    ? this.$route.params.categorySlug
-                    : this.$route.name
-            );
-        }
+        this.$store.dispatch(
+            CATEGORIES.GET,
+            this.$route.params.categorySlug
+                ? this.$route.params.categorySlug
+                : this.$route.name
+        );
     },
     methods: {
         onCloseMenuClick() {

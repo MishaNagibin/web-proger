@@ -8,16 +8,16 @@
             <div class="popular-categories">
                 <h2>Популярные категории</h2>
                 <span>
-                    <router-link :to="{ name: 'Frontend' }">Frontend</router-link>
-                    <router-link :to="{ name: 'Backend' }">Backend</router-link>
-                    <router-link :to="{ name: 'Layout' }">Вёрстка</router-link>
-                    <router-link :to="{ name: 'WebDesign' }">Веб-дизайн</router-link>
-                    <router-link :to="{ name: 'MobileDevelopment' }">Мобильная разработка</router-link>
-                    <router-link :to="{ name: 'Cms' }">CMS</router-link>
-                    <router-link :to="{ name: 'Seo' }">SEO</router-link>
-                    <router-link :to="{ name: 'Gamedev' }">GameDev</router-link>
-                    <router-link :to="{ name: 'Testing' }">Тестирование</router-link>
-                    <router-link :to="{ name: 'Modeling' }">Моделирование</router-link>
+                    <router-link :to="{ name: 'Courses', params: { categorySlug: 'frontend' } }">Frontend</router-link>
+                    <router-link :to="{ name: 'Courses', params: { categorySlug: 'backend' } }">Backend</router-link>
+                    <router-link :to="{ name: 'Courses', params: { categorySlug: 'layout' } }">Вёрстка</router-link>
+                    <router-link :to="{ name: 'Courses', params: { categorySlug: 'web-design' } }">Веб-дизайн</router-link>
+                    <router-link :to="{ name: 'Courses', params: { categorySlug: 'mobile-development' } }">Мобильная разработка</router-link>
+                    <router-link :to="{ name: 'Courses', params: { categorySlug: 'cms' } }">CMS</router-link>
+                    <router-link :to="{ name: 'Courses', params: { categorySlug: 'seo' } }">SEO</router-link>
+                    <router-link :to="{ name: 'Courses', params: { categorySlug: 'gamedev' } }">GameDev</router-link>
+                    <router-link :to="{ name: 'Courses', params: { categorySlug: 'testing' } }">Тестирование</router-link>
+                    <router-link :to="{ name: 'Courses', params: { categorySlug: 'modeling' } }">Моделирование</router-link>
                 </span>
             </div>
             <section class="last-added-courses">
