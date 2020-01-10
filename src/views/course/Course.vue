@@ -198,6 +198,9 @@ export default Vue.extend({
                     & > .list-resize {
                         width: 100%;
                         margin-left: unset;
+                        align-self: center;
+                        border-top: 1px solid black;
+                        margin-top: 20px;
                     }
 
                     & > .player {
@@ -217,6 +220,9 @@ export default Vue.extend({
 
                     & > .player {
                         align-self: center;
+                        height: 720px;
+                        max-width: 1080px;
+                        width: 100%;
                     }
                 }
             }
