@@ -22,7 +22,6 @@
                 v-for="(category, index) of categories"
                 :key="index"
                 :to="category.langSlug ? { name: 'Courses', params: { categorySlug: category.categorySlug, langSlug: category.langSlug } } : category.categorySlug !== 'Courses' ? { name: 'Courses', params: { categorySlug: category.categorySlug } } : ''"
-                :class="{ active: $route.params.langSlug ? category.langSlug === $route.params.langSlug : category.name === 'Все' }"
             >{{ category.name }}</router-link>
         </section>
 
@@ -44,15 +43,13 @@
                         @click="onCloseMenuClick"
                     ></span>
                     <div>
-                        <div
+                        <router-link
                             v-for="(category, index) of categories"
                             :key="index"
-                            :class="['category', { active: $route.params.langSlug ? category.langSlug === $route.params.langSlug : category.name === 'Все' }]"
+                            :to="category.langSlug ? { name: 'Courses', params: { categorySlug: category.categorySlug, langSlug: category.langSlug } } : category.categorySlug !== 'Courses' ? { name: 'Courses', params: { categorySlug: category.categorySlug } } : ''"
                         >
-                            <router-link
-                                :to="category.langSlug ? { name: 'Courses', params: { categorySlug: category.categorySlug, langSlug: category.langSlug } } : category.categorySlug !== 'Courses' ? { name: 'Courses', params: { categorySlug: category.categorySlug } } : ''"
-                            >{{ category.name }}</router-link>
-                        </div>
+                            <div class="category">{{ category.name }}</div>
+                        </router-link>
                     </div>
                 </div>
             </transition>
@@ -192,7 +189,7 @@ export default Vue.extend({
             }
         }
 
-        & > .active {
+        & > .router-link-exact-active {
             background-color: $red-500;
             color: $gray-000;
             border-radius: 4px;
@@ -282,34 +279,32 @@ export default Vue.extend({
                 flex-wrap: wrap;
                 justify-content: center;
 
-                & > .category {
-                    background-color: $gray-300;
-                    width: 140px;
-                    height: 20px;
-                    text-align: center;
-                    border-radius: 4px;
-                    padding: 20px;
+                & > a {
+                    display: flex;
+                    justify-content: center;
                     text-decoration: none;
                     color: $gray-900;
-                    align-self: center;
-                    margin: 0 20px 20px 20px;
-                    display: flex;
-                    align-items: center;
 
-                    & > a {
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
+                    & > .category {
+                        background-color: $gray-300;
+                        width: 140px;
+                        height: 20px;
+                        text-align: center;
+                        border-radius: 4px;
+                        padding: 20px;
                         text-decoration: none;
                         color: $gray-900;
+                        align-self: center;
+                        margin: 0 20px 20px 20px;
+                        display: flex;
+                        align-items: center;
                     }
                 }
 
-                & > .active {
-                    background-color: $red-300;
-                    border-color: $red-300;
-
-                    & > a {
+                & > .router-link-exact-active {
+                    & > .category {
+                        background-color: $red-300;
+                        border-color: $red-300;
                         color: $gray-000;
                     }
                 }
@@ -341,9 +336,11 @@ export default Vue.extend({
         & > .mobile-menu {
             & > .menu-drop-down {
                 & > div {
-                    & > .category {
-                        width: 120px;
-                        margin: 0 0 20px 20px;
+                    & > a {
+                        & > .category {
+                            width: 120px;
+                            margin: 0 0 20px 20px;
+                        }
                     }
                 }
             }
