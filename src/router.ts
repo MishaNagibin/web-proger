@@ -5,6 +5,7 @@ import vCourses from '@/views/courses/Courses.vue'
 import vHome from '@/views/home/Home.vue'
 import vTechnologies from '@/views/technologies/Technologies.vue';
 import vTechnology from '@/views/technology/Technology.vue';
+import vLoginOrRegistration from '@/views/loginOrRegistration/LoginOrRegistration.vue';
 
 Vue.use(Router)
 
@@ -74,6 +75,19 @@ export default new Router({
                 breadcrumbs: [
                     { name: 'Главная страница', routeName: 'Home' },
                     { name: 'Технологии', routeName: 'Technologies' },
+                ]
+            }
+        },
+        {
+            name: 'LoginOrRegistration',
+            path: '/:mode(login|registration)',
+            component: vLoginOrRegistration,
+            props: true,
+            meta: {
+                title: `${SITE_TITLE} | Авторизация`,
+                breadcrumbs: [
+                    { name: 'Главная страница', routeName: 'Home' },
+                    { name: 'Авторизация' },
                 ]
             }
         },
